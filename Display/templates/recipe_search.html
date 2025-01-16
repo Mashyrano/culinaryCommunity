@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search</title>
+</head>
+<body>
+    <h1>Search Recipes</h1>
+    <form method="get">
+        <input type="text" name="query" placeholder="Enter recipe name" value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if recipes %}
+        <h2>Results:</h2>
+        <ul>
+            {% for recipe in recipes %}
+                <li>
+                    <h3>{{ recipe.name }}</h3>
+                    <img src="{{ recipe.thumbnail_url }}" alt="{{ recipe.name }}" style="width: 200px;">
+                    <p>{{ recipe.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% elif recipes is not empty %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>
+    
