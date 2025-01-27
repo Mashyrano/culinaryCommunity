@@ -1,9 +1,9 @@
 count:
-    114
+    109
 results:
     [0]
         approved_at:
-            1498088244
+            1500671398
         aspect_ratio:
             1:1
         beauty_url:
@@ -15,11 +15,11 @@ results:
         buzz_id:
             None
         canonical_id:
-            recipe:1008
+            recipe:1686
         compilations:
             [0]
                 approved_at:
-                    1547829097
+                    1500671408
                 aspect_ratio:
                     1:1
                 beauty_url:
@@ -27,26 +27,26 @@ results:
                 buzz_id:
                     None
                 canonical_id:
-                    compilation:845
+                    compilation:100
                 country:
-                    US
+                    ZZ
                 created_at:
-                    1546595556
+                    1499828788
                 description:
                     None
                 draft_status:
                     published
                 facebook_posts:
                 id:
-                    845
+                    100
                 is_shoppable:
-                    True
+                    False
                 keywords:
                     None
                 language:
                     eng
                 name:
-                    The Only Meal Prep Guide You Need To Follow
+                    3-Minute Mug Cakes 4 Ways
                 promotion:
                     full
                 show:
@@ -56,37 +56,37 @@ results:
                         name:
                             Tasty
                 slug:
-                    the-only-meal-prep-guide-you-need-to-follow
+                    3-minute-mug-cakes-4-ways
                 thumbnail_alt_text:
                     
                 thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/199100.jpg
+                    https://img.buzzfeed.com/video-api-prod/assets/4f81effcc015454d8d54115898d54ceb/BF_THUMB_Square.jpg
                 video_id:
-                    74957
+                    14152
                 video_url:
-                    https://vid.tasty.co/output/121977/hls24_1546925148.m3u8
+                    https://vid.tasty.co/output/28419/low_1491348690.m3u8
             [1]
                 approved_at:
-                    1560999044
+                    1535486042
                 aspect_ratio:
-                    1:1
+                    None
                 beauty_url:
                     None
                 buzz_id:
                     None
                 canonical_id:
-                    compilation:973
+                    compilation:646
                 country:
                     US
                 created_at:
-                    1560926886
+                    1535474962
                 description:
                     None
                 draft_status:
                     published
                 facebook_posts:
                 id:
-                    973
+                    646
                 is_shoppable:
                     False
                 keywords:
@@ -94,7 +94,7 @@ results:
                 language:
                     eng
                 name:
-                    7 Healthy And Low Carb Recipes
+                    13 Easy Microwave Cakes
                 promotion:
                     full
                 show:
@@ -104,18 +104,18 @@ results:
                         name:
                             Tasty
                 slug:
-                    7-healthy-and-fat-free-recipes
+                    13-easy-microwave-cakes
                 thumbnail_alt_text:
                     
                 thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/221539.jpg
+                    https://img.buzzfeed.com/video-api-prod/assets/0e358f1528834ed6bc417d825a8d6015/MircowaveCakeSquare_THUMB.jpg
                 video_id:
-                    85791
+                    65383
                 video_url:
-                    https://vid.tasty.co/output/136446/hls24_1560926810.m3u8
+                    https://vid.tasty.co/output/106991/hls24_1535474734.m3u8
             [2]
                 approved_at:
-                    1598883310
+                    1537066959
                 aspect_ratio:
                     1:1
                 beauty_url:
@@ -123,18 +123,18 @@ results:
                 buzz_id:
                     None
                 canonical_id:
-                    compilation:1673
+                    compilation:665
                 country:
                     US
                 created_at:
-                    1598615530
+                    1536963676
                 description:
-                    None
+                    This selection of 52 (!!) kid-friendly recipes is a lifesaver for all parents. You’ll find easy after-school snacks like <a href="https://tasty.co/recipe/pizza-chips">pizza chips</a>, healthy but delicious breakfasts like these <a href="https://tasty.co/recipe/pb-j-overnight-oats">PB&J overnight oats</a>, along with plenty of fun recipes to make with your kids for brunch or as a weekend activity. And fair warning: lots of these will be a big hit with the grownups, too!
                 draft_status:
                     published
                 facebook_posts:
                 id:
-                    1673
+                    665
                 is_shoppable:
                     False
                 keywords:
@@ -142,28 +142,28 @@ results:
                 language:
                     eng
                 name:
-                    Low Calorie Dinners For The Week 
+                    52 Kid-Friendly Recipes
                 promotion:
                     full
                 show:
                     [0]
                         id:
-                            34
+                            17
                         name:
-                            Goodful
+                            Tasty
                 slug:
-                    low-calorie-dinners-for-the-week
+                    52-kid-friendly-recipes
                 thumbnail_alt_text:
                     
                 thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/280651.jpg
+                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/178761.jpg
                 video_id:
-                    110885
+                    66623
                 video_url:
-                    https://vid.tasty.co/output/177341/hls24_1598616173.m3u8
+                    https://vid.tasty.co/output/109057/hls24_1536961519.m3u8
             [3]
                 approved_at:
-                    1626107482
+                    1562893070
                 aspect_ratio:
                     1:1
                 beauty_url:
@@ -171,18 +171,18 @@ results:
                 buzz_id:
                     None
                 canonical_id:
-                    compilation:2589
+                    compilation:1021
                 country:
                     US
                 created_at:
-                    1625075435
+                    1562823726
                 description:
-                    Got a hectic day ahead of you and don't have time for a grocery run? We've got your back with our 5-Ingredient Recipes. Bonus? They'll feed you for a whole day. Quell those lunchtime grumbles with our <a href="https://tasty.co/recipe/weekday-meal-prep-pesto-chicken-veggies">Chicken Pesto & Veggies</a>. Oh, and don't forget to chase that down with a side of <a href="https://tasty.co/recipe/5-ingredient-healthy-brownies">Brownies</a>! That's right, you even get dessert. 5-ingredients but full of flavor, these recipes are here for you. Always. 
+                    None
                 draft_status:
                     published
                 facebook_posts:
                 id:
-                    2589
+                    1021
                 is_shoppable:
                     False
                 keywords:
@@ -190,7 +190,7 @@ results:
                 language:
                     eng
                 name:
-                    5 Ingredient Recipes For An Entire Day
+                    8 Incredibly Easy Dorm-Friendly Mug Recipes
                 promotion:
                     full
                 show:
@@ -200,18 +200,18 @@ results:
                         name:
                             Tasty
                 slug:
-                    5-ingredient-recipes-for-an-entire-day
+                    8-incredibly-easy-dorm-friendly-mug-recipes
                 thumbnail_alt_text:
                     
                 thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/330147.jpg
+                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/224892.jpg
                 video_id:
-                    134377
+                    87265
                 video_url:
-                    https://vid.tasty.co/output/208147/hls24_1625075817.m3u8
+                    https://vid.tasty.co/output/138651/hls24_1562825925.m3u8
             [4]
                 approved_at:
-                    1628185428
+                    1622729103
                 aspect_ratio:
                     1:1
                 beauty_url:
@@ -219,18 +219,18 @@ results:
                 buzz_id:
                     None
                 canonical_id:
-                    compilation:2720
+                    compilation:2472
                 country:
                     US
                 created_at:
-                    1627884044
+                    1622185057
                 description:
-                    Have a really busy week coming up? Well that's no excuse to not eat! We're here to fuel your mind, body, and soul, in the most delicious way possible. Our <a href="https://tasty.co/recipe/weekday-meal-prep-turkey-taco-bowls">turkey taco bowl</a> is delicious and will keep you filled up, and our <a href="https://tasty.co/recipe/vegetarian-grain-bowl-meal-prep">vegetarian grain bowl</a> is an ideal option for vegetarians and vegans. Don't sweat, we've got your back (and your rumbling tummy)! 
+                    Sprinkle some love onto your desserts with well, what else, but sprinkles?! Spruce up these boring ol' desserts with a touch of colourful and yummy sprinkles. Try our mouthwatering <a href="https://tasty.co/recipe/baked-strawberry-ice-cream-sprinkle-cake">Baked Strawberry Ice Cream Sprinkle Cake</a> and <a href="https://tasty.co/recipe/birthday-cake-nanaimo-bars">Birthday Cake Nanaimo Bars</a> — it's never *not* the time to celebrate! Don't forget to tell us which one you like best.
                 draft_status:
                     published
                 facebook_posts:
                 id:
-                    2720
+                    2472
                 is_shoppable:
                     False
                 keywords:
@@ -238,7 +238,7 @@ results:
                 language:
                     eng
                 name:
-                    How To Meal Prep
+                    Sprinkle Your Desserts With Sprinkles
                 promotion:
                     full
                 show:
@@ -248,18 +248,18 @@ results:
                         name:
                             Tasty
                 slug:
-                    how-to-meal-prep
+                    sprinkle-your-desserts-with-sprinkles
                 thumbnail_alt_text:
                     
                 thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/334854.jpg
+                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/324273.jpg
                 video_id:
-                    138074
+                    131583
                 video_url:
-                    https://vid.tasty.co/output/211405/hls24_1627884306.m3u8
+                    https://vid.tasty.co/output/204328/hls24_1622187483.m3u8
             [5]
                 approved_at:
-                    1669752653
+                    1625236111
                 aspect_ratio:
                     1:1
                 beauty_url:
@@ -267,18 +267,18 @@ results:
                 buzz_id:
                     None
                 canonical_id:
-                    compilation:3347
+                    compilation:2555
                 country:
                     US
                 created_at:
-                    1666362810
+                    1624996388
                 description:
-                    Mornings are difficult enough without having to prepare lunch for the office. Here are a few quick, easy, and healthy lunch ideas for people who are always on the go. The <a href="https://tasty.co/recipe/weekday-meal-prep-chicken-burrito-bowls">Weekday Meal-Prep Chicken Burrito Bowls</a> will save you time throughout the week! Make mornings ridiculously simple and nutritious with <a href="https://tasty.co/recipe/microwave-prep-breakfast-sandwiches">Microwave Prep Breakfast Sandwiches</a> with ham or bacon.
+                    None
                 draft_status:
                     published
                 facebook_posts:
                 id:
-                    3347
+                    2555
                 is_shoppable:
                     False
                 keywords:
@@ -286,7 +286,7 @@ results:
                 language:
                     eng
                 name:
-                    Easy Office Lunch Ideas!
+                    Recipes For When You're Missing Your Childhood
                 promotion:
                     full
                 show:
@@ -296,18 +296,18 @@ results:
                         name:
                             Tasty
                 slug:
-                    easy-office-lunch-ideas
+                    recipes-for-when-you-re-missing-your-childhood
                 thumbnail_alt_text:
                     
                 thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/406487.jpg
+                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/329629.jpg
                 video_id:
-                    171838
+                    134946
                 video_url:
-                    https://vid.tasty.co/output/258934/hls24_1666362285.m3u8
+                    https://vid.tasty.co/output/207755/hls24_1624997717.m3u8
             [6]
                 approved_at:
-                    1672247047
+                    1654611799
                 aspect_ratio:
                     1:1
                 beauty_url:
@@ -315,18 +315,22 @@ results:
                 buzz_id:
                     None
                 canonical_id:
-                    compilation:3448
+                    compilation:3182
                 country:
                     US
                 created_at:
-                    1669775988
+                    1652964663
                 description:
+<<<<<<< Updated upstream
                     The new year is upon us and so is the time to make some choices in life. Letâ€™s make a resolution to enter 2023 with healthier habits. From <a href="https://tasty.co/recipe/weekday-meal-prep-pesto-chicken-veggies">Weekday Meal-Prep Pesto Chicken & Veggies</a> to a <a href="https://tasty.co/recipe/berry-smoothie-bowl">Berry Smoothie Bowl</a>, we have got your culinary pact covered.
+=======
+                    What's better than making the best out of your most used kitchen essential: Mug! No pulling out 3 bowls, 2 pans for cooking and spending hours cleaning up the dishes. Take out your favourite mug because it's time for some <a href="thttps://tasty.co/recipe/pizza-in-a-mug">Pizza in a mug</a>. Feeling fancy? How about a <a href="https://tasty.co/recipe/mug-baked-rigatoni">Mug baked Rigatoni</a>. Craving something sweet at 2 AM? Whip up a <a href="https://tasty.co/recipe/chocolate-chip-muffin-mug">Chocolate Muffin</a> in just 2 mins! All you need is a mug!
+>>>>>>> Stashed changes
                 draft_status:
                     published
                 facebook_posts:
                 id:
-                    3448
+                    3182
                 is_shoppable:
                     False
                 keywords:
@@ -334,7 +338,7 @@ results:
                 language:
                     eng
                 name:
-                    Healthy Recipes for Your New Year's Resolutions
+                    All You Need is a Mug!
                 promotion:
                     full
                 show:
@@ -344,18 +348,18 @@ results:
                         name:
                             Tasty
                 slug:
-                    healthy-recipes-new-years-resolutions
+                    all-you-need-is-a-mug
                 thumbnail_alt_text:
-                    
+                    All you need is a Mug!
                 thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/413921.jpg
+                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/378572.jpg
                 video_id:
-                    175312
+                    157888
                 video_url:
-                    https://vid.tasty.co/output/264243/hls24_1669775959.m3u8
+                    https://vid.tasty.co/output/239996/hls24_1652967139.m3u8
             [7]
                 approved_at:
-                    1674236225
+                    1660763818
                 aspect_ratio:
                     1:1
                 beauty_url:
@@ -363,18 +367,18 @@ results:
                 buzz_id:
                     None
                 canonical_id:
-                    compilation:3454
+                    compilation:3249
                 country:
                     US
                 created_at:
-                    1670214548
+                    1657860554
                 description:
-                    It's time to celebrate the sun's return to the sign of Aquarius. Use that analytical brain for cooking the tastiest recipes! From <a href="https://tasty.co/recipe/weekday-meal-prep-pesto-chicken-veggies">Weekday Meal-Prep Pesto Chicken & Veggies</a> to <a href="https://tasty.co/recipe/lemon-bundt-cake">Lemon Bundt Cake</a>, this Aquarius season is going to be delicious for our water bearers!
+                    Mug cooking is one of the greatest boons of our existence. You can snap up a quick, yet delicious, meal all in one dish. This <a href="https://tasty.co/recipe/mug-baked-rigatoni">rigatoni</a> looks fancy AF, but comes out of a mug. Have frequent midnight cravings? Bookmark this <a href="https://tasty.co/recipe/pizza-in-a-mug">pizza in a mug</a> or check out these different <a href="https://tasty.co/compilation/3-minute-mug-cakes-4-ways">flavored mug cakes</a>. For busy mornings, we recommend this <a href="https://tasty.co/recipe/blueberry-french-toast-in-a-mug">blueberry french toast in a mug</a>. Get your mugs ready already!
                 draft_status:
                     published
                 facebook_posts:
                 id:
-                    3454
+                    3249
                 is_shoppable:
                     False
                 keywords:
@@ -382,7 +386,7 @@ results:
                 language:
                     eng
                 name:
-                    Recipes for Aquarius Season
+                    Everything You Can Cook In A Mug
                 promotion:
                     full
                 show:
@@ -392,27 +396,27 @@ results:
                         name:
                             Tasty
                 slug:
-                    aquarius-recipes
+                    everything-you-can-cook-in-a-mug
                 thumbnail_alt_text:
                     
                 thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/415135.jpg
+                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/388593.jpg
                 video_id:
-                    175864
+                    162511
                 video_url:
-                    https://vid.tasty.co/output/265000/hls24_1670214505.m3u8
+                    https://vid.tasty.co/output/246702/hls24_1657860544.m3u8
         cook_time_minutes:
-            12
+            2
         country:
             ZZ
         created_at:
-            1494537688
+            1499828789
         credits:
             [0]
                 is_verified:
                     False
                 name:
-                    Robin Broadfoot
+                    Vaughn Vreeland
                 picture_url:
                     
                 type:
@@ -420,88 +424,79 @@ results:
                 user_id:
                     None
         description:
-            This pesto chicken and veggies meal prep is a lifesaver for anyone who's looking for a quick and easy way to eat healthy during the week! Tender chicken breasts, green beans and tomatoes are coated in a delicious basil pesto. 
+            We’ve got news for you: You can celebrate your birthday any day of the year, thanks to this single-serve birthday cake in a mug. All you have to do is combine the ingredients into a mug or ramekin, microwave it for about two minutes, and voilà: Warm and delicious birthday cake for one.
         draft_status:
             published
         facebook_posts:
         id:
+<<<<<<< Updated upstream
             1008
     inspired_by_url:
             http://juliasalbum.com/2016/06/one-pan-pesto-chicken-and-veggies/
+=======
+            1686
+        inspired_by_url:
+            None
+>>>>>>> Stashed changes
         instructions:
             [0]
                 appliance:
                     None
                 display_text:
-                    Heat the olive oil in a large pan over medium heat, then add the chicken thighs. Season with salt and pepper. Cook until the chicken is no longer pink in the center, then remove from the pan. Slice into strips.
+                    In a 12-ounce (375 ml) or larger mug , mix all ingredients until just combined.
                 end_time:
-                    2816
+                    81000
                 id:
-                    7419
+                    14635
                 position:
                     1
                 start_time:
-                    0
+                    72210
                 temperature:
                     None
             [1]
                 appliance:
                     None
                 display_text:
-                    Add the green beans to the same pan and cook until tender-crisp.
+                    Microwave on high for 90 seconds to 2 minutes, watching to make sure it doesn’t spill over (depending on the size of the mug).
                 end_time:
-                    12417
+                    0
                 id:
-                    7420
+                    14636
                 position:
                     2
                 start_time:
-                    10667
+                    0
                 temperature:
                     None
             [2]
                 appliance:
                     None
                 display_text:
-                    Return the chicken strips to the pan, then add the tomatoes and pesto. Stir until fully incorporated.
+                    Let cool one minute before eating. Top with whipped topping and sprinkles (optional).
                 end_time:
-                    18467
+                    93380
                 id:
-                    10232
+                    14637
                 position:
                     3
                 start_time:
-                    12517
+                    88000
                 temperature:
                     None
             [3]
                 appliance:
                     None
                 display_text:
-                    Serve immediately or divide into 4 food storage containers and store in the refrigerator for up to 4 days.
+                    Enjoy!
                 end_time:
-                    26333
+                    95716
                 id:
-                    44875
+                    14638
                 position:
                     4
                 start_time:
-                    20666
-                temperature:
-                    None
-            [4]
-                appliance:
-                    None
-                display_text:
-                    Enjoy!
-                end_time:
-                    31266
-                id:
-                    44876
-                position:
-                    5
-                start_time:
-                    27000
+                    94380
                 temperature:
                     None
         is_app_only:
@@ -513,49 +508,76 @@ results:
         is_subscriber_content:
             False
         keywords:
-            chicken, green beans, meal-prep, one-pan, pesto, tomatoes, veggies
+            None
         language:
             eng
         name:
-            Weekday Meal-Prep Pesto Chicken & Veggies
+            Birthday Cake Mug Cake
         num_servings:
-            4
+            1
         nutrition:
             calories:
-                351
+                456
             carbohydrates:
-                15
+                62
             fat:
-                23
+                18
             fiber:
-                5
+                0
             protein:
-                23
+                5
             sugar:
-                7
+                33
             updated_at:
-                2024-05-01T08:11:30+02:00
+                2024-05-01T08:10:38+02:00
         nutrition_visibility:
             auto
         original_video_url:
-            https://s3.amazonaws.com/video-api-prod/assets/84de8458f4df4f70bc1a8d471f6d81f6/BFV13595_One-PanPestoChickenAndGreenBeans-FB1080SQ.mp4
+            https://s3.amazonaws.com/video-api-prod/assets/ef1a78307b404a71986970326c23c62b/BFV18819_MugCakesFourWays-FB.mp4
         prep_time_minutes:
-            10
+            5
         price:
             consumption_portion:
                 350
             consumption_total:
-                1300
+                350
             portion:
-                450
+                1100
             total:
-                1850
+                1100
             updated_at:
-                2025-01-16T06:12:57+01:00
+                2025-01-16T06:10:42+01:00
         promotion:
             full
         renditions:
             [0]
+                aspect:
+                    square
+                bit_rate:
+                    7393
+                container:
+                    mp4
+                content_type:
+                    video/mp4
+                duration:
+                    101850
+                file_size:
+                    94119792
+                height:
+                    720
+                maximum_bit_rate:
+                    None
+                minimum_bit_rate:
+                    None
+                name:
+                    mp4_720x720
+                poster_url:
+                    https://img.buzzfeed.com/video-transcoder-prod/output/28419/mp4_1280X720/1491348690_00001.png
+                url:
+                    https://vid.tasty.co/output/28419/mp4_1280X720/1491348690
+                width:
+                    720
+            [1]
                 aspect:
                     square
                 bit_rate:
@@ -565,63 +587,36 @@ results:
                 content_type:
                     application/vnd.apple.mpegurl
                 duration:
-                    0
+                    101810
                 file_size:
                     None
                 height:
                     1080
                 maximum_bit_rate:
-                    None
+                    8345
                 minimum_bit_rate:
-                    None
+                    274
                 name:
                     low
                 poster_url:
-                    https://img.buzzfeed.com/video-transcoder-prod/output/12355/1445289064805-h2exzu/1476822662_00001.png
+                    https://img.buzzfeed.com/video-transcoder-prod/output/28419/1445289064805-h2exzu/1491348690_00001.png
                 url:
-                    https://vid.tasty.co/output/12355/low_1476822662.m3u8
+                    https://vid.tasty.co/output/28419/low_1491348690.m3u8
                 width:
                     1080
-            [1]
-                aspect:
-                    square
-                bit_rate:
-                    None
-                container:
-                    mp4
-                content_type:
-                    video/mp4
-                duration:
-                    0
-                file_size:
-                    None
-                height:
-                    720
-                maximum_bit_rate:
-                    None
-                minimum_bit_rate:
-                    None
-                name:
-                    mp4_720x720
-                poster_url:
-                    https://img.buzzfeed.com/video-transcoder-prod/output/12355/mp4_1280X720/1476822662_00001.png
-                url:
-                    https://vid.tasty.co/output/12355/mp4_1280X720/1476822662
-                width:
-                    720
             [2]
                 aspect:
                     square
                 bit_rate:
-                    None
+                    7383
                 container:
                     mp4
                 content_type:
                     video/mp4
                 duration:
-                    0
+                    101850
                 file_size:
-                    None
+                    93993672
                 height:
                     640
                 maximum_bit_rate:
@@ -631,24 +626,24 @@ results:
                 name:
                     mp4_640x640
                 poster_url:
-                    https://img.buzzfeed.com/video-transcoder-prod/output/12355/mp4_640x640/1476822662_00001.png
+                    https://img.buzzfeed.com/video-transcoder-prod/output/28419/mp4_640x640/1491348690_00001.png
                 url:
-                    https://vid.tasty.co/output/12355/mp4_640x640/1476822662
+                    https://vid.tasty.co/output/28419/mp4_640x640/1491348690
                 width:
                     640
             [3]
                 aspect:
                     square
                 bit_rate:
-                    None
+                    7414
                 container:
                     mp4
                 content_type:
                     video/mp4
                 duration:
-                    0
+                    101850
                 file_size:
-                    None
+                    94381745
                 height:
                     720
                 maximum_bit_rate:
@@ -658,9 +653,9 @@ results:
                 name:
                     mp4_720x720
                 poster_url:
-                    https://img.buzzfeed.com/video-transcoder-prod/output/12355/mp4_720x1280/1476822662_00001.png
+                    https://img.buzzfeed.com/video-transcoder-prod/output/28419/mp4_720x1280/1491348690_00001.png
                 url:
-                    https://vid.tasty.co/output/12355/mp4_720x1280/1476822662
+                    https://vid.tasty.co/output/28419/mp4_720x1280/1491348690
                 width:
                     720
         sections:
@@ -670,26 +665,26 @@ results:
                         extra_comment:
                             
                         id:
-                            10852
+                            17443
                         ingredient:
                             created_at:
-                                1493306183
+                                1493314654
                             display_plural:
-                                olive oils
+                                flours
                             display_singular:
-                                olive oil
+                                flour
                             id:
-                                4
+                                25
                             name:
-                                olive oil
+                                flour
                             updated_at:
-                                1509035290
+                                1509035288
                         measurements:
                             [0]
                                 id:
-                                    829586
+                                    790542
                                 quantity:
-                                    2
+                                    4
                                 unit:
                                     abbreviation:
                                         tbsp
@@ -704,310 +699,309 @@ results:
                         position:
                             1
                         raw_text:
-                            2 tablespoons olive oil
+                            4 tablespoons flour
                     [1]
                         extra_comment:
                             
                         id:
-                            10853
+                            17444
                         ingredient:
                             created_at:
-                                1494975805
+                                1493314650
                             display_plural:
-                                boneless, skinless chicken thighs
+                                sugars
                             display_singular:
-                                boneless, skinless chicken thigh
+                                sugar
                             id:
-                                373
+                                24
                             name:
-                                boneless, skinless chicken thighs
-                            updated_at:
-                                1521648462
-                        measurements:
-                            [0]
-                                id:
-                                    829593
-                                quantity:
-                                    4
-                                unit:
-                                    abbreviation:
-                                        
-                                    display_plural:
-                                        
-                                    display_singular:
-                                        
-                                    name:
-                                        
-                                    system:
-                                        none
-                        position:
-                            2
-                        raw_text:
-                            4 chicken thighs, boneless and skinless
-                    [2]
-                        extra_comment:
-                            to taste
-                        id:
-                            10854
-                        ingredient:
-                            created_at:
-                                1493314644
-                            display_plural:
-                                salts
-                            display_singular:
-                                salt
-                            id:
-                                22
-                            name:
-                                salt
+                                sugar
                             updated_at:
                                 1509035288
                         measurements:
                             [0]
                                 id:
-                                    829584
+                                    790540
                                 quantity:
-                                    0
+                                    3
                                 unit:
                                     abbreviation:
-                                        
+                                        tbsp
                                     display_plural:
-                                        
+                                        tablespoons
                                     display_singular:
-                                        
+                                        tablespoon
                                     name:
-                                        
+                                        tablespoon
                                     system:
-                                        none
+                                        imperial
                         position:
-                            3
+                            2
                         raw_text:
-                            Salt, to taste
-                    [3]
+                            3 tablespoons sugar
+                    [2]
                         extra_comment:
-                            to taste
+                            plus more for topping
                         id:
-                            10855
+                            17446
                         ingredient:
                             created_at:
-                                1493314935
+                                1494880839
                             display_plural:
-                                peppers
+                                sprinkles
                             display_singular:
-                                pepper
+                                sprinkles
                             id:
-                                29
+                                336
                             name:
-                                pepper
+                                sprinkles
                             updated_at:
-                                1509035287
+                                1604956424
                         measurements:
                             [0]
                                 id:
-                                    829585
-                                quantity:
-                                    0
-                                unit:
-                                    abbreviation:
-                                        
-                                    display_plural:
-                                        
-                                    display_singular:
-                                        
-                                    name:
-                                        
-                                    system:
-                                        none
-                        position:
-                            4
-                        raw_text:
-                            Pepper, to taste
-                    [4]
-                        extra_comment:
-                            
-                        id:
-                            10856
-                        ingredient:
-                            created_at:
-                                1494976031
-                            display_plural:
-                                green beans
-                            display_singular:
-                                green bean
-                            id:
-                                374
-                            name:
-                                green beans
-                            updated_at:
-                                1509035266
-                        measurements:
-                            [0]
-                                id:
-                                    829592
-                                quantity:
-                                    455
-                                unit:
-                                    abbreviation:
-                                        g
-                                    display_plural:
-                                        g
-                                    display_singular:
-                                        g
-                                    name:
-                                        gram
-                                    system:
-                                        metric
-                            [1]
-                                id:
-                                    829591
+                                    790541
                                 quantity:
                                     1
                                 unit:
                                     abbreviation:
-                                        lb
+                                        tbsp
                                     display_plural:
-                                        lb
+                                        tablespoons
                                     display_singular:
-                                        lb
+                                        tablespoon
                                     name:
-                                        pound
+                                        tablespoon
+                                    system:
+                                        imperial
+                        position:
+                            3
+                        raw_text:
+                            2 tablespoons sprinkles
+                    [3]
+                        extra_comment:
+                            
+                        id:
+                            17445
+                        ingredient:
+                            created_at:
+                                1493314647
+                            display_plural:
+                                baking powders
+                            display_singular:
+                                baking powder
+                            id:
+                                23
+                            name:
+                                baking powder
+                            updated_at:
+                                1509035288
+                        measurements:
+                            [0]
+                                id:
+                                    790544
+                                quantity:
+                                    ½
+                                unit:
+                                    abbreviation:
+                                        tsp
+                                    display_plural:
+                                        teaspoons
+                                    display_singular:
+                                        teaspoon
+                                    name:
+                                        teaspoon
+                                    system:
+                                        imperial
+                        position:
+                            4
+                        raw_text:
+                            ½ teaspoon baking powder
+                    [4]
+                        extra_comment:
+                            
+                        id:
+                            17447
+                        ingredient:
+                            created_at:
+                                1493314636
+                            display_plural:
+                                milks
+                            display_singular:
+                                milk
+                            id:
+                                21
+                            name:
+                                milk
+                            updated_at:
+                                1509035288
+                        measurements:
+                            [0]
+                                id:
+                                    790537
+                                quantity:
+                                    3
+                                unit:
+                                    abbreviation:
+                                        tbsp
+                                    display_plural:
+                                        tablespoons
+                                    display_singular:
+                                        tablespoon
+                                    name:
+                                        tablespoon
                                     system:
                                         imperial
                         position:
                             5
                         raw_text:
-                            1 pound green beans
+                            3 tablespoons milk
                     [5]
                         extra_comment:
-                            halved
+                            
                         id:
-                            10857
+                            17448
                         ingredient:
                             created_at:
-                                1494623731
+                                1493314628
                             display_plural:
-                                cherry tomatoes
+                                vegetable oils
                             display_singular:
-                                cherry tomato
+                                vegetable oil
                             id:
-                                264
+                                20
                             name:
-                                cherry tomatoes
+                                vegetable oil
                             updated_at:
-                                1509035275
+                                1509035288
                         measurements:
                             [0]
                                 id:
-                                    829588
+                                    790539
                                 quantity:
-                                    400
+                                    1
                                 unit:
                                     abbreviation:
-                                        g
+                                        tbsp
                                     display_plural:
-                                        g
+                                        tablespoons
                                     display_singular:
-                                        g
+                                        tablespoon
                                     name:
-                                        gram
-                                    system:
-                                        metric
-                            [1]
-                                id:
-                                    829587
-                                quantity:
-                                    2
-                                unit:
-                                    abbreviation:
-                                        c
-                                    display_plural:
-                                        cups
-                                    display_singular:
-                                        cup
-                                    name:
-                                        cup
+                                        tablespoon
                                     system:
                                         imperial
                         position:
                             6
                         raw_text:
-                            2 cups cherry tomatoes, halved
+                            1 tablespoon oil
                     [6]
                         extra_comment:
                             
                         id:
-                            10858
+                            17449
                         ingredient:
                             created_at:
-                                1494977575
+                                1493745620
                             display_plural:
-                                basil pestoes
+                                vanilla extracts
                             display_singular:
-                                basil pesto
+                                vanilla extract
                             id:
-                                379
+                                103
                             name:
-                                basil pesto
+                                vanilla extract
                             updated_at:
-                                1509035265
+                                1509035284
                         measurements:
                             [0]
                                 id:
-                                    829590
+                                    790543
                                 quantity:
-                                    115
+                                    2
                                 unit:
                                     abbreviation:
-                                        g
+                                        tsp
                                     display_plural:
-                                        g
+                                        teaspoons
                                     display_singular:
-                                        g
+                                        teaspoon
                                     name:
-                                        gram
-                                    system:
-                                        metric
-                            [1]
-                                id:
-                                    829589
-                                quantity:
-                                    Â½
-                                unit:
-                                    abbreviation:
-                                        c
-                                    display_plural:
-                                        cups
-                                    display_singular:
-                                        cup
-                                    name:
-                                        cup
+                                        teaspoon
                                     system:
                                         imperial
                         position:
                             7
                         raw_text:
+                            2 teaspoons vanilla extract
+                    [7]
+                        extra_comment:
+                            for topping, optional
+                        id:
+                            19618
+                        ingredient:
+                            created_at:
+                                1495221767
+                            display_plural:
+                                whipped toppings
+                            display_singular:
+                                whipped topping
+                            id:
+                                537
+                            name:
+                                whipped topping
+                            updated_at:
+                                1509035253
+                        measurements:
+                            [0]
+                                id:
+                                    790538
+                                quantity:
+<<<<<<< Updated upstream
+                                    Â½
+=======
+                                    0
+>>>>>>> Stashed changes
+                                unit:
+                                    abbreviation:
+                                        
+                                    display_plural:
+                                        
+                                    display_singular:
+                                        
+                                    name:
+                                        
+                                    system:
+                                        none
+                        position:
+                            8
+                        raw_text:
+<<<<<<< Updated upstream
                             Â½ cup basil pesto
+=======
+                            n/a
+>>>>>>> Stashed changes
                 name:
                     None
                 position:
                     1
         seo_path:
-            9295813,64486,64505
+            9295812,9299134,188967
         seo_title:
-            None
+            Birthday Mug Cake 
         servings_noun_plural:
             servings
         servings_noun_singular:
             serving
         show:
             id:
-                34
+                17
             name:
-                Goodful
+                Tasty
         show_id:
-            34
+            17
         slug:
-            weekday-meal-prep-pesto-chicken-veggies
+            birthday-cake-mug-cake
         tags:
             [0]
                 display_name:
@@ -1024,58 +1018,6 @@ results:
                     cuisine
             [1]
                 display_name:
-                    Dairy-Free
-                id:
-                    64463
-                name:
-                    dairy_free
-                parent_tag_name:
-                    dietary
-                root_tag_type:
-                    dietary
-                type:
-                    dietary
-            [2]
-                display_name:
-                    Gluten-Free
-                id:
-                    64465
-                name:
-                    gluten_free
-                parent_tag_name:
-                    dietary
-                root_tag_type:
-                    dietary
-                type:
-                    dietary
-            [3]
-                display_name:
-                    Healthy
-                id:
-                    64466
-                name:
-                    healthy
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    healthy
-                type:
-                    healthy
-            [4]
-                display_name:
-                    Low-Carb
-                id:
-                    64467
-                name:
-                    low_carb
-                parent_tag_name:
-                    healthy
-                root_tag_type:
-                    healthy
-                type:
-                    healthy
-            [5]
-                display_name:
                     Easy
                 id:
                     64471
@@ -1087,7 +1029,7 @@ results:
                     difficulty
                 type:
                     difficulty
-            [6]
+            [2]
                 display_name:
                     Under 30 Minutes
                 id:
@@ -1100,59 +1042,72 @@ results:
                     difficulty
                 type:
                     difficulty
+            [3]
+                display_name:
+                    Desserts
+                id:
+                    64485
+                name:
+                    desserts
+                parent_tag_name:
+                    meal
+                root_tag_type:
+                    meal
+                type:
+                    meal
+            [4]
+                display_name:
+                    Kid-Friendly
+                id:
+                    64488
+                name:
+                    kid_friendly
+                parent_tag_name:
+                    cooking_style
+                root_tag_type:
+                    cooking_style
+                type:
+                    cooking_style
+            [5]
+                display_name:
+                    Baking
+                id:
+                    64492
+                name:
+                    baking
+                parent_tag_name:
+                    appliance
+                root_tag_type:
+                    appliance
+                type:
+                    appliance
+            [6]
+                display_name:
+                    Microwave
+                id:
+                    65845
+                name:
+                    microwave
+                parent_tag_name:
+                    appliance
+                root_tag_type:
+                    appliance
+                type:
+                    appliance
             [7]
                 display_name:
-                    Lunch
+                    No Bake Desserts
                 id:
-                    64489
+                    65854
                 name:
-                    lunch
+                    no_bake_desserts
                 parent_tag_name:
-                    meal
+                    cooking_style
                 root_tag_type:
-                    meal
+                    cooking_style
                 type:
-                    meal
+                    cooking_style
             [8]
-                display_name:
-                    Weeknight
-                id:
-                    64505
-                name:
-                    weeknight
-                parent_tag_name:
-                    dinner
-                root_tag_type:
-                    meal
-                type:
-                    dinner
-            [9]
-                display_name:
-                    Stove Top
-                id:
-                    65848
-                name:
-                    stove_top
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    appliance
-                type:
-                    appliance
-            [10]
-                display_name:
-                    Meal Prep
-                id:
-                    65853
-                name:
-                    meal_prep
-                parent_tag_name:
-                    cooking_style
-                root_tag_type:
-                    cooking_style
-                type:
-                    cooking_style
-            [11]
                 display_name:
                     One-Pot or Pan
                 id:
@@ -1165,111 +1120,20 @@ results:
                     cooking_style
                 type:
                     cooking_style
-            [12]
+            [9]
                 display_name:
-                    Pan Fry
+                    Special Occasion
                 id:
-                    65859
+                    188967
                 name:
-                    pan_fry
+                    special_occasion
                 parent_tag_name:
-                    cooking_style
+                    occasion
                 root_tag_type:
-                    cooking_style
+                    seasonal
                 type:
-                    cooking_style
-            [13]
-                display_name:
-                    Pyrex
-                id:
-                    1247785
-                name:
-                    pyrex
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    equipment
-                type:
-                    equipment
-            [14]
-                display_name:
-                    Saute Pan
-                id:
-                    1247787
-                name:
-                    saute_pan
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    equipment
-                type:
-                    equipment
-            [15]
-                display_name:
-                    Tongs
-                id:
-                    1247790
-                name:
-                    tongs
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    equipment
-                type:
-                    equipment
-            [16]
-                display_name:
-                    Tupperware
-                id:
-                    1247791
-                name:
-                    tupperware
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    equipment
-                type:
-                    equipment
-            [17]
-                display_name:
-                    Chef's Knife
-                id:
-                    1280501
-                name:
-                    chefs_knife
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    equipment
-                type:
-                    equipment
-            [18]
-                display_name:
-                    Cutting Board
-                id:
-                    1280503
-                name:
-                    cutting_board
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    equipment
-                type:
-                    equipment
-            [19]
-                display_name:
-                    Dry Measuring Cups
-                id:
-                    1280507
-                name:
-                    dry_measuring_cups
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    equipment
-                type:
-                    equipment
-            [20]
+                    occasion
+            [10]
                 display_name:
                     Measuring Spoons
                 id:
@@ -1282,33 +1146,33 @@ results:
                     equipment
                 type:
                     equipment
-            [21]
+            [11]
                 display_name:
-                    Summer Eat
+                    Tasty EWD Fifteen
                 id:
-                    7041320
+                    6117479
                 name:
-                    summer_eat
+                    tasty_ewd_fifteen
                 parent_tag_name:
                     None
                 root_tag_type:
                     feature_page
                 type:
                     feature_page
-            [22]
+            [12]
                 display_name:
-                    Shoppable Recipes Meal Prep
+                    Under 15 Minutes
                 id:
-                    7336055
+                    8091744
                 name:
-                    shoppable_recipes_meal_prep
+                    under_15_minutes
                 parent_tag_name:
-                    None
+                    difficulty
                 root_tag_type:
-                    feature_page
+                    difficulty
                 type:
-                    feature_page
-            [23]
+                    difficulty
+            [13]
                 display_name:
                     Under 45 Minutes
                 id:
@@ -1321,7 +1185,7 @@ results:
                     difficulty
                 type:
                     difficulty
-            [24]
+            [14]
                 display_name:
                     Under 1 Hour
                 id:
@@ -1334,98 +1198,20 @@ results:
                     difficulty
                 type:
                     difficulty
-            [25]
+            [15]
                 display_name:
-                    High-Protein
+                    Gluten
                 id:
-                    8091917
+                    10623589
                 name:
-                    high_protein
+                    gluten
                 parent_tag_name:
-                    healthy
+                    ingredients_to_avoid
                 root_tag_type:
-                    healthy
+                    ingredients_to_avoid
                 type:
-                    healthy
-            [26]
-                display_name:
-                    Low-Sugar
-                id:
-                    8091918
-                name:
-                    low_sugar
-                parent_tag_name:
-                    healthy
-                root_tag_type:
-                    healthy
-                type:
-                    healthy
-            [27]
-                display_name:
-                    High-Fiber
-                id:
-                    8091920
-                name:
-                    high_fiber
-                parent_tag_name:
-                    healthy
-                root_tag_type:
-                    healthy
-                type:
-                    healthy
-            [28]
-                display_name:
-                    Meal
-                id:
-                    9295813
-                name:
-                    meal
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    meal
-                type:
-                    meal
-            [29]
-                display_name:
-                    Dietary
-                id:
-                    9295814
-                name:
-                    dietary
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    dietary
-                type:
-                    dietary
-            [30]
-                display_name:
-                    Chicken
-                id:
-                    9299514
-                name:
-                    chicken
-                parent_tag_name:
-                    dinner
-                root_tag_type:
-                    meal
-                type:
-                    dinner
-            [31]
-                display_name:
-                    Weekday Meals
-                id:
-                    10315442
-                name:
-                    weekday_meals
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    feature_page
-                type:
-                    feature_page
-            [32]
+                    ingredients_to_avoid
+            [16]
                 display_name:
                     Dairy
                 id:
@@ -1438,82 +1224,59 @@ results:
                     ingredients_to_avoid
                 type:
                     ingredients_to_avoid
-            [33]
-                display_name:
-                    Chicken
-                id:
-                    10623612
-                name:
-                    chicken
-                parent_tag_name:
-                    ingredients_to_avoid
-                root_tag_type:
-                    ingredients_to_avoid
-                type:
-                    ingredients_to_avoid
         thumbnail_alt_text:
             
         thumbnail_url:
-            https://img.buzzfeed.com/video-api-prod/assets/29f6cbb3a6c44658ba03d3421e8d2204/BFV13595_One-PanPestoChickenAndGreenBeans-ThumbTextless1080.jpg
+            https://img.buzzfeed.com/thumbnailer-prod-us-east-1/d3e827192dcf4194bf61a6c151ffab52/BFV18819_MugCakesFourWays-FB.jpg
         tips_and_ratings_enabled:
             True
         topics:
             [0]
                 name:
-                    Healthy Eating
+                    Kid Friendly
                 slug:
-                    healthy
+                    kid-friendly
             [1]
                 name:
-                    Low Carb Meals
+                    No Bake Desserts
                 slug:
-                    low-carb-meals
+                    no-bake-desserts
             [2]
-                name:
-                    Weekend Meal Prep
-                slug:
-                    meal-prep
-            [3]
                 name:
                     One-Pot Recipes
                 slug:
                     one-pot
+            [3]
+                name:
+                    Desserts
+                slug:
+                    desserts
             [4]
-                name:
-                    Romantic Dinners
-                slug:
-                    romantic-dinners
-            [5]
-                name:
-                    Lunch
-                slug:
-                    lunch
-            [6]
                 name:
                     American
                 slug:
                     american
         total_time_minutes:
-            22
+            7
         total_time_tier:
             display_tier:
-                Under 30 minutes
+                Under 15 minutes
             tier:
-                under_30_minutes
+                under_15_minutes
         updated_at:
-            1683237600
+            1560117600
         user_ratings:
             count_negative:
-                137
+                1220
             count_positive:
-                4313
+                5258
             score:
-                0.9692134831460674
+                0.8116702686014202
         video_ad_content:
             none
         video_id:
-            7664
+            14152
         video_url:
-            https://vid.tasty.co/output/12355/low_1476822662.m3u8
+            https://vid.tasty.co/output/28419/low_1491348690.m3u8
         yields:
-            Servings: 4
+            Servings: 1

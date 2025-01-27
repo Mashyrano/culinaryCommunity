@@ -3,16 +3,108 @@
     padding: 0;
 }
 
+/*********************************** Basic Styling ***********************************/
+.lobster-regular {
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+body {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Header styling */
+.intro{
+    background-color: #FF0000;
+    text-align: center;
+    padding: 1%;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.search{
+    border: 1px #000000 solid;
+    padding: 1%;
+    width: 20%;
+}
+
+/* Footer styling */
+footer{
+    background-color: #97BE5A;
+}
+
+
+
+/*********************************** Home Page Styling ***********************************/
+
+/* Banner styling */
+.excerpt{
+    max-width :400px; ;
+}
+
+.excerpt-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* 2 */
+    -webkit-box-orient: vertical;
+}
+
+.excerpt-more{
+    font-size: 14px;
+    color: #337ab7;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************** Archive Page Styling ***********************************/
+
+/*********************************** Recipe Page Styling ***********************************/
+
+/*********************************** Contact Page Styling ***********************************/
+
+
 h1 {
     color: blueviolet;
 }
-ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-li {
-    list-style-type: none;
-}
-nav {
-    background-color: yellow;
-}
+
