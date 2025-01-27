@@ -7,6 +7,7 @@ from API.models import Instruction
 from API.models import Recipe_nutrition
 from API.models import  Nutrition
 from API.models import Measurement
+from API.models import SavedRecipe
 # Register your models here.
 
 admin.site.register(Recipe)
@@ -17,3 +18,4 @@ admin.site.register(Image)
 admin.site.register(Recipe_nutrition)
 admin.site.register(Nutrition)
 admin.site.register(Measurement)
+admin.site.register(SavedRecipe)

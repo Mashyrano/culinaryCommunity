@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Recipe(models.Model):
@@ -8,7 +9,7 @@ class Recipe(models.Model):
     description = models.TextField()
     num_servings = models.IntegerField()
     prep_time = models.IntegerField()
-    thumbnail = models.ImageField(upload_to='recipe/') #must be downloaded first
+    thumbnail = models.ImageField(upload_to='recipe/')
     rating_score = models.IntegerField() #will be calculated from likes & dislikes
     video_url = models.URLField()
 
@@ -61,3 +62,10 @@ class Recipe_nutrition(models.Model):
 
     def __str__(self):
         return self.recipe_id.name + " - " + self.nutrition_id.name
+    
+class SavedRecipe(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    recipe_id = models.CharField(max_length=100)
+    recipe_source = models.CharField(max_length=50, choices=[('api', 'API'), ('local', 'Local')])
+    recipe_name = models.CharField(max_length=100)
+    saved_at = models.DateTimeField(auto_now_add=True)

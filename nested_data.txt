@@ -321,7 +321,7 @@ results:
                 created_at:
                     1669775988
                 description:
-                    The new year is upon us and so is the time to make some choices in life. Let’s make a resolution to enter 2023 with healthier habits. From <a href="https://tasty.co/recipe/weekday-meal-prep-pesto-chicken-veggies">Weekday Meal-Prep Pesto Chicken & Veggies</a> to a <a href="https://tasty.co/recipe/berry-smoothie-bowl">Berry Smoothie Bowl</a>, we have got your culinary pact covered.
+                    The new year is upon us and so is the time to make some choices in life. Letâ€™s make a resolution to enter 2023 with healthier habits. From <a href="https://tasty.co/recipe/weekday-meal-prep-pesto-chicken-veggies">Weekday Meal-Prep Pesto Chicken & Veggies</a> to a <a href="https://tasty.co/recipe/berry-smoothie-bowl">Berry Smoothie Bowl</a>, we have got your culinary pact covered.
                 draft_status:
                     published
                 facebook_posts:
@@ -426,7 +426,7 @@ results:
         facebook_posts:
         id:
             1008
-        inspired_by_url:
+    inspired_by_url:
             http://juliasalbum.com/2016/06/one-pan-pesto-chicken-and-veggies/
         instructions:
             [0]
@@ -971,7 +971,7 @@ results:
                                 id:
                                     829589
                                 quantity:
-                                    ½
+                                    Â½
                                 unit:
                                     abbreviation:
                                         c
@@ -986,7 +986,7 @@ results:
                         position:
                             7
                         raw_text:
-                            ½ cup basil pesto
+                            Â½ cup basil pesto
                 name:
                     None
                 position:
