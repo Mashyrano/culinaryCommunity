@@ -3,7 +3,8 @@ from django.shortcuts import render
 import requests
 
 def home(request):
-    return render(request, 'home.html')
+    context = get_context()
+    return render(request, 'home.html', context)
 
 def contact(request):
     return render(request, 'contact.html')
@@ -21,3 +22,11 @@ def recipe_search(request):
             recipes = response.json().get('results', [])
     
     return render(request, 'recipe_search.html', {'recipes': recipes, 'query': query})
+
+# helper  functions
+def get_context():
+    response = requests.get('http://127.0.0.1:8000/API/random_recipe')
+    print(response)
+    return {
+        "random" : response.json()
+    }

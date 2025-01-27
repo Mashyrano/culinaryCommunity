@@ -124,8 +124,8 @@ def search_recipes(request):
 
 # Search a recipe by ID
 @api_view(['GET'])
-def get_recipe_by_id(request, recipe_id):
-    url = f"https://tasty.p.rapidapi.com/recipes/get-more-info?id={recipe_id}"
+def get_recipe_by_id(request, pk):
+    url = f"https://tasty.p.rapidapi.com/recipes/get-more-info?id={pk}"
     response = requests.get(url, headers=API_HEADERS)
 
     if response.status_code == 200:
@@ -136,7 +136,7 @@ def get_recipe_by_id(request, recipe_id):
 # Search by Category of recipes
 
 
-# View 2: Fetch random recipe daily
+# Fetch random recipe daily
 @api_view(['GET'])
 def get_daily_random_recipe(request):
     # Generate a random ID based on the date
