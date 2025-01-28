@@ -1,1282 +1,284 @@
-count:
-    109
-results:
-    [0]
-        approved_at:
-            1500671398
-        aspect_ratio:
-            1:1
-        beauty_url:
-            None
-        brand:
-            None
-        brand_id:
-            None
-        buzz_id:
-            None
-        canonical_id:
-            recipe:1686
-        compilations:
-            [0]
-                approved_at:
-                    1500671408
-                aspect_ratio:
-                    1:1
-                beauty_url:
-                    None
-                buzz_id:
-                    None
-                canonical_id:
-                    compilation:100
-                country:
-                    ZZ
-                created_at:
-                    1499828788
-                description:
-                    None
-                draft_status:
-                    published
-                facebook_posts:
-                id:
-                    100
-                is_shoppable:
-                    False
-                keywords:
-                    None
-                language:
-                    eng
-                name:
-                    3-Minute Mug Cakes 4 Ways
-                promotion:
-                    full
-                show:
-                    [0]
-                        id:
-                            17
-                        name:
-                            Tasty
-                slug:
-                    3-minute-mug-cakes-4-ways
-                thumbnail_alt_text:
-                    
-                thumbnail_url:
-                    https://img.buzzfeed.com/video-api-prod/assets/4f81effcc015454d8d54115898d54ceb/BF_THUMB_Square.jpg
-                video_id:
-                    14152
-                video_url:
-                    https://vid.tasty.co/output/28419/low_1491348690.m3u8
-            [1]
-                approved_at:
-                    1535486042
-                aspect_ratio:
-                    None
-                beauty_url:
-                    None
-                buzz_id:
-                    None
-                canonical_id:
-                    compilation:646
-                country:
-                    US
-                created_at:
-                    1535474962
-                description:
-                    None
-                draft_status:
-                    published
-                facebook_posts:
-                id:
-                    646
-                is_shoppable:
-                    False
-                keywords:
-                    None
-                language:
-                    eng
-                name:
-                    13 Easy Microwave Cakes
-                promotion:
-                    full
-                show:
-                    [0]
-                        id:
-                            17
-                        name:
-                            Tasty
-                slug:
-                    13-easy-microwave-cakes
-                thumbnail_alt_text:
-                    
-                thumbnail_url:
-                    https://img.buzzfeed.com/video-api-prod/assets/0e358f1528834ed6bc417d825a8d6015/MircowaveCakeSquare_THUMB.jpg
-                video_id:
-                    65383
-                video_url:
-                    https://vid.tasty.co/output/106991/hls24_1535474734.m3u8
-            [2]
-                approved_at:
-                    1537066959
-                aspect_ratio:
-                    1:1
-                beauty_url:
-                    None
-                buzz_id:
-                    None
-                canonical_id:
-                    compilation:665
-                country:
-                    US
-                created_at:
-                    1536963676
-                description:
-                    This selection of 52 (!!) kid-friendly recipes is a lifesaver for all parents. You’ll find easy after-school snacks like <a href="https://tasty.co/recipe/pizza-chips">pizza chips</a>, healthy but delicious breakfasts like these <a href="https://tasty.co/recipe/pb-j-overnight-oats">PB&J overnight oats</a>, along with plenty of fun recipes to make with your kids for brunch or as a weekend activity. And fair warning: lots of these will be a big hit with the grownups, too!
-                draft_status:
-                    published
-                facebook_posts:
-                id:
-                    665
-                is_shoppable:
-                    False
-                keywords:
-                    None
-                language:
-                    eng
-                name:
-                    52 Kid-Friendly Recipes
-                promotion:
-                    full
-                show:
-                    [0]
-                        id:
-                            17
-                        name:
-                            Tasty
-                slug:
-                    52-kid-friendly-recipes
-                thumbnail_alt_text:
-                    
-                thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/178761.jpg
-                video_id:
-                    66623
-                video_url:
-                    https://vid.tasty.co/output/109057/hls24_1536961519.m3u8
-            [3]
-                approved_at:
-                    1562893070
-                aspect_ratio:
-                    1:1
-                beauty_url:
-                    None
-                buzz_id:
-                    None
-                canonical_id:
-                    compilation:1021
-                country:
-                    US
-                created_at:
-                    1562823726
-                description:
-                    None
-                draft_status:
-                    published
-                facebook_posts:
-                id:
-                    1021
-                is_shoppable:
-                    False
-                keywords:
-                    None
-                language:
-                    eng
-                name:
-                    8 Incredibly Easy Dorm-Friendly Mug Recipes
-                promotion:
-                    full
-                show:
-                    [0]
-                        id:
-                            17
-                        name:
-                            Tasty
-                slug:
-                    8-incredibly-easy-dorm-friendly-mug-recipes
-                thumbnail_alt_text:
-                    
-                thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/224892.jpg
-                video_id:
-                    87265
-                video_url:
-                    https://vid.tasty.co/output/138651/hls24_1562825925.m3u8
-            [4]
-                approved_at:
-                    1622729103
-                aspect_ratio:
-                    1:1
-                beauty_url:
-                    None
-                buzz_id:
-                    None
-                canonical_id:
-                    compilation:2472
-                country:
-                    US
-                created_at:
-                    1622185057
-                description:
-                    Sprinkle some love onto your desserts with well, what else, but sprinkles?! Spruce up these boring ol' desserts with a touch of colourful and yummy sprinkles. Try our mouthwatering <a href="https://tasty.co/recipe/baked-strawberry-ice-cream-sprinkle-cake">Baked Strawberry Ice Cream Sprinkle Cake</a> and <a href="https://tasty.co/recipe/birthday-cake-nanaimo-bars">Birthday Cake Nanaimo Bars</a> — it's never *not* the time to celebrate! Don't forget to tell us which one you like best.
-                draft_status:
-                    published
-                facebook_posts:
-                id:
-                    2472
-                is_shoppable:
-                    False
-                keywords:
-                    None
-                language:
-                    eng
-                name:
-                    Sprinkle Your Desserts With Sprinkles
-                promotion:
-                    full
-                show:
-                    [0]
-                        id:
-                            17
-                        name:
-                            Tasty
-                slug:
-                    sprinkle-your-desserts-with-sprinkles
-                thumbnail_alt_text:
-                    
-                thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/324273.jpg
-                video_id:
-                    131583
-                video_url:
-                    https://vid.tasty.co/output/204328/hls24_1622187483.m3u8
-            [5]
-                approved_at:
-                    1625236111
-                aspect_ratio:
-                    1:1
-                beauty_url:
-                    None
-                buzz_id:
-                    None
-                canonical_id:
-                    compilation:2555
-                country:
-                    US
-                created_at:
-                    1624996388
-                description:
-                    None
-                draft_status:
-                    published
-                facebook_posts:
-                id:
-                    2555
-                is_shoppable:
-                    False
-                keywords:
-                    None
-                language:
-                    eng
-                name:
-                    Recipes For When You're Missing Your Childhood
-                promotion:
-                    full
-                show:
-                    [0]
-                        id:
-                            17
-                        name:
-                            Tasty
-                slug:
-                    recipes-for-when-you-re-missing-your-childhood
-                thumbnail_alt_text:
-                    
-                thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/329629.jpg
-                video_id:
-                    134946
-                video_url:
-                    https://vid.tasty.co/output/207755/hls24_1624997717.m3u8
-            [6]
-                approved_at:
-                    1654611799
-                aspect_ratio:
-                    1:1
-                beauty_url:
-                    None
-                buzz_id:
-                    None
-                canonical_id:
-                    compilation:3182
-                country:
-                    US
-                created_at:
-                    1652964663
-                description:
-<<<<<<< Updated upstream
-                    The new year is upon us and so is the time to make some choices in life. Letâ€™s make a resolution to enter 2023 with healthier habits. From <a href="https://tasty.co/recipe/weekday-meal-prep-pesto-chicken-veggies">Weekday Meal-Prep Pesto Chicken & Veggies</a> to a <a href="https://tasty.co/recipe/berry-smoothie-bowl">Berry Smoothie Bowl</a>, we have got your culinary pact covered.
-=======
-                    What's better than making the best out of your most used kitchen essential: Mug! No pulling out 3 bowls, 2 pans for cooking and spending hours cleaning up the dishes. Take out your favourite mug because it's time for some <a href="thttps://tasty.co/recipe/pizza-in-a-mug">Pizza in a mug</a>. Feeling fancy? How about a <a href="https://tasty.co/recipe/mug-baked-rigatoni">Mug baked Rigatoni</a>. Craving something sweet at 2 AM? Whip up a <a href="https://tasty.co/recipe/chocolate-chip-muffin-mug">Chocolate Muffin</a> in just 2 mins! All you need is a mug!
->>>>>>> Stashed changes
-                draft_status:
-                    published
-                facebook_posts:
-                id:
-                    3182
-                is_shoppable:
-                    False
-                keywords:
-                    None
-                language:
-                    eng
-                name:
-                    All You Need is a Mug!
-                promotion:
-                    full
-                show:
-                    [0]
-                        id:
-                            17
-                        name:
-                            Tasty
-                slug:
-                    all-you-need-is-a-mug
-                thumbnail_alt_text:
-                    All you need is a Mug!
-                thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/378572.jpg
-                video_id:
-                    157888
-                video_url:
-                    https://vid.tasty.co/output/239996/hls24_1652967139.m3u8
-            [7]
-                approved_at:
-                    1660763818
-                aspect_ratio:
-                    1:1
-                beauty_url:
-                    None
-                buzz_id:
-                    None
-                canonical_id:
-                    compilation:3249
-                country:
-                    US
-                created_at:
-                    1657860554
-                description:
-                    Mug cooking is one of the greatest boons of our existence. You can snap up a quick, yet delicious, meal all in one dish. This <a href="https://tasty.co/recipe/mug-baked-rigatoni">rigatoni</a> looks fancy AF, but comes out of a mug. Have frequent midnight cravings? Bookmark this <a href="https://tasty.co/recipe/pizza-in-a-mug">pizza in a mug</a> or check out these different <a href="https://tasty.co/compilation/3-minute-mug-cakes-4-ways">flavored mug cakes</a>. For busy mornings, we recommend this <a href="https://tasty.co/recipe/blueberry-french-toast-in-a-mug">blueberry french toast in a mug</a>. Get your mugs ready already!
-                draft_status:
-                    published
-                facebook_posts:
-                id:
-                    3249
-                is_shoppable:
-                    False
-                keywords:
-                    None
-                language:
-                    eng
-                name:
-                    Everything You Can Cook In A Mug
-                promotion:
-                    full
-                show:
-                    [0]
-                        id:
-                            17
-                        name:
-                            Tasty
-                slug:
-                    everything-you-can-cook-in-a-mug
-                thumbnail_alt_text:
-                    
-                thumbnail_url:
-                    https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/388593.jpg
-                video_id:
-                    162511
-                video_url:
-                    https://vid.tasty.co/output/246702/hls24_1657860544.m3u8
-        cook_time_minutes:
-            2
-        country:
-            ZZ
-        created_at:
-            1499828789
-        credits:
-            [0]
-                is_verified:
-                    False
-                name:
-                    Vaughn Vreeland
-                picture_url:
-                    
-                type:
-                    internal
-                user_id:
-                    None
-        description:
-            We’ve got news for you: You can celebrate your birthday any day of the year, thanks to this single-serve birthday cake in a mug. All you have to do is combine the ingredients into a mug or ramekin, microwave it for about two minutes, and voilà: Warm and delicious birthday cake for one.
-        draft_status:
-            published
-        facebook_posts:
-        id:
-<<<<<<< Updated upstream
-            1008
-    inspired_by_url:
-            http://juliasalbum.com/2016/06/one-pan-pesto-chicken-and-veggies/
-=======
-            1686
-        inspired_by_url:
-            None
->>>>>>> Stashed changes
-        instructions:
-            [0]
-                appliance:
-                    None
-                display_text:
-                    In a 12-ounce (375 ml) or larger mug , mix all ingredients until just combined.
-                end_time:
-                    81000
-                id:
-                    14635
-                position:
-                    1
-                start_time:
-                    72210
-                temperature:
-                    None
-            [1]
-                appliance:
-                    None
-                display_text:
-                    Microwave on high for 90 seconds to 2 minutes, watching to make sure it doesn’t spill over (depending on the size of the mug).
-                end_time:
-                    0
-                id:
-                    14636
-                position:
-                    2
-                start_time:
-                    0
-                temperature:
-                    None
-            [2]
-                appliance:
-                    None
-                display_text:
-                    Let cool one minute before eating. Top with whipped topping and sprinkles (optional).
-                end_time:
-                    93380
-                id:
-                    14637
-                position:
-                    3
-                start_time:
-                    88000
-                temperature:
-                    None
-            [3]
-                appliance:
-                    None
-                display_text:
-                    Enjoy!
-                end_time:
-                    95716
-                id:
-                    14638
-                position:
-                    4
-                start_time:
-                    94380
-                temperature:
-                    None
-        is_app_only:
-            False
-        is_one_top:
-            False
-        is_shoppable:
-            True
-        is_subscriber_content:
-            False
-        keywords:
-            None
-        language:
-            eng
-        name:
-            Birthday Cake Mug Cake
-        num_servings:
-            1
-        nutrition:
-            calories:
-                456
-            carbohydrates:
-                62
-            fat:
-                18
-            fiber:
-                0
-            protein:
-                5
-            sugar:
-                33
-            updated_at:
-                2024-05-01T08:10:38+02:00
-        nutrition_visibility:
-            auto
-        original_video_url:
-            https://s3.amazonaws.com/video-api-prod/assets/ef1a78307b404a71986970326c23c62b/BFV18819_MugCakesFourWays-FB.mp4
-        prep_time_minutes:
-            5
-        price:
-            consumption_portion:
-                350
-            consumption_total:
-                350
-            portion:
-                1100
-            total:
-                1100
-            updated_at:
-                2025-01-16T06:10:42+01:00
-        promotion:
-            full
-        renditions:
-            [0]
-                aspect:
-                    square
-                bit_rate:
-                    7393
-                container:
-                    mp4
-                content_type:
-                    video/mp4
-                duration:
-                    101850
-                file_size:
-                    94119792
-                height:
-                    720
-                maximum_bit_rate:
-                    None
-                minimum_bit_rate:
-                    None
-                name:
-                    mp4_720x720
-                poster_url:
-                    https://img.buzzfeed.com/video-transcoder-prod/output/28419/mp4_1280X720/1491348690_00001.png
-                url:
-                    https://vid.tasty.co/output/28419/mp4_1280X720/1491348690
-                width:
-                    720
-            [1]
-                aspect:
-                    square
-                bit_rate:
-                    None
-                container:
-                    mp4
-                content_type:
-                    application/vnd.apple.mpegurl
-                duration:
-                    101810
-                file_size:
-                    None
-                height:
-                    1080
-                maximum_bit_rate:
-                    8345
-                minimum_bit_rate:
-                    274
-                name:
-                    low
-                poster_url:
-                    https://img.buzzfeed.com/video-transcoder-prod/output/28419/1445289064805-h2exzu/1491348690_00001.png
-                url:
-                    https://vid.tasty.co/output/28419/low_1491348690.m3u8
-                width:
-                    1080
-            [2]
-                aspect:
-                    square
-                bit_rate:
-                    7383
-                container:
-                    mp4
-                content_type:
-                    video/mp4
-                duration:
-                    101850
-                file_size:
-                    93993672
-                height:
-                    640
-                maximum_bit_rate:
-                    None
-                minimum_bit_rate:
-                    None
-                name:
-                    mp4_640x640
-                poster_url:
-                    https://img.buzzfeed.com/video-transcoder-prod/output/28419/mp4_640x640/1491348690_00001.png
-                url:
-                    https://vid.tasty.co/output/28419/mp4_640x640/1491348690
-                width:
-                    640
-            [3]
-                aspect:
-                    square
-                bit_rate:
-                    7414
-                container:
-                    mp4
-                content_type:
-                    video/mp4
-                duration:
-                    101850
-                file_size:
-                    94381745
-                height:
-                    720
-                maximum_bit_rate:
-                    None
-                minimum_bit_rate:
-                    None
-                name:
-                    mp4_720x720
-                poster_url:
-                    https://img.buzzfeed.com/video-transcoder-prod/output/28419/mp4_720x1280/1491348690_00001.png
-                url:
-                    https://vid.tasty.co/output/28419/mp4_720x1280/1491348690
-                width:
-                    720
-        sections:
-            [0]
-                components:
-                    [0]
-                        extra_comment:
-                            
-                        id:
-                            17443
-                        ingredient:
-                            created_at:
-                                1493314654
-                            display_plural:
-                                flours
-                            display_singular:
-                                flour
-                            id:
-                                25
-                            name:
-                                flour
-                            updated_at:
-                                1509035288
-                        measurements:
-                            [0]
-                                id:
-                                    790542
-                                quantity:
-                                    4
-                                unit:
-                                    abbreviation:
-                                        tbsp
-                                    display_plural:
-                                        tablespoons
-                                    display_singular:
-                                        tablespoon
-                                    name:
-                                        tablespoon
-                                    system:
-                                        imperial
-                        position:
-                            1
-                        raw_text:
-                            4 tablespoons flour
-                    [1]
-                        extra_comment:
-                            
-                        id:
-                            17444
-                        ingredient:
-                            created_at:
-                                1493314650
-                            display_plural:
-                                sugars
-                            display_singular:
-                                sugar
-                            id:
-                                24
-                            name:
-                                sugar
-                            updated_at:
-                                1509035288
-                        measurements:
-                            [0]
-                                id:
-                                    790540
-                                quantity:
-                                    3
-                                unit:
-                                    abbreviation:
-                                        tbsp
-                                    display_plural:
-                                        tablespoons
-                                    display_singular:
-                                        tablespoon
-                                    name:
-                                        tablespoon
-                                    system:
-                                        imperial
-                        position:
-                            2
-                        raw_text:
-                            3 tablespoons sugar
-                    [2]
-                        extra_comment:
-                            plus more for topping
-                        id:
-                            17446
-                        ingredient:
-                            created_at:
-                                1494880839
-                            display_plural:
-                                sprinkles
-                            display_singular:
-                                sprinkles
-                            id:
-                                336
-                            name:
-                                sprinkles
-                            updated_at:
-                                1604956424
-                        measurements:
-                            [0]
-                                id:
-                                    790541
-                                quantity:
-                                    1
-                                unit:
-                                    abbreviation:
-                                        tbsp
-                                    display_plural:
-                                        tablespoons
-                                    display_singular:
-                                        tablespoon
-                                    name:
-                                        tablespoon
-                                    system:
-                                        imperial
-                        position:
-                            3
-                        raw_text:
-                            2 tablespoons sprinkles
-                    [3]
-                        extra_comment:
-                            
-                        id:
-                            17445
-                        ingredient:
-                            created_at:
-                                1493314647
-                            display_plural:
-                                baking powders
-                            display_singular:
-                                baking powder
-                            id:
-                                23
-                            name:
-                                baking powder
-                            updated_at:
-                                1509035288
-                        measurements:
-                            [0]
-                                id:
-                                    790544
-                                quantity:
-                                    ½
-                                unit:
-                                    abbreviation:
-                                        tsp
-                                    display_plural:
-                                        teaspoons
-                                    display_singular:
-                                        teaspoon
-                                    name:
-                                        teaspoon
-                                    system:
-                                        imperial
-                        position:
-                            4
-                        raw_text:
-                            ½ teaspoon baking powder
-                    [4]
-                        extra_comment:
-                            
-                        id:
-                            17447
-                        ingredient:
-                            created_at:
-                                1493314636
-                            display_plural:
-                                milks
-                            display_singular:
-                                milk
-                            id:
-                                21
-                            name:
-                                milk
-                            updated_at:
-                                1509035288
-                        measurements:
-                            [0]
-                                id:
-                                    790537
-                                quantity:
-                                    3
-                                unit:
-                                    abbreviation:
-                                        tbsp
-                                    display_plural:
-                                        tablespoons
-                                    display_singular:
-                                        tablespoon
-                                    name:
-                                        tablespoon
-                                    system:
-                                        imperial
-                        position:
-                            5
-                        raw_text:
-                            3 tablespoons milk
-                    [5]
-                        extra_comment:
-                            
-                        id:
-                            17448
-                        ingredient:
-                            created_at:
-                                1493314628
-                            display_plural:
-                                vegetable oils
-                            display_singular:
-                                vegetable oil
-                            id:
-                                20
-                            name:
-                                vegetable oil
-                            updated_at:
-                                1509035288
-                        measurements:
-                            [0]
-                                id:
-                                    790539
-                                quantity:
-                                    1
-                                unit:
-                                    abbreviation:
-                                        tbsp
-                                    display_plural:
-                                        tablespoons
-                                    display_singular:
-                                        tablespoon
-                                    name:
-                                        tablespoon
-                                    system:
-                                        imperial
-                        position:
-                            6
-                        raw_text:
-                            1 tablespoon oil
-                    [6]
-                        extra_comment:
-                            
-                        id:
-                            17449
-                        ingredient:
-                            created_at:
-                                1493745620
-                            display_plural:
-                                vanilla extracts
-                            display_singular:
-                                vanilla extract
-                            id:
-                                103
-                            name:
-                                vanilla extract
-                            updated_at:
-                                1509035284
-                        measurements:
-                            [0]
-                                id:
-                                    790543
-                                quantity:
-                                    2
-                                unit:
-                                    abbreviation:
-                                        tsp
-                                    display_plural:
-                                        teaspoons
-                                    display_singular:
-                                        teaspoon
-                                    name:
-                                        teaspoon
-                                    system:
-                                        imperial
-                        position:
-                            7
-                        raw_text:
-                            2 teaspoons vanilla extract
-                    [7]
-                        extra_comment:
-                            for topping, optional
-                        id:
-                            19618
-                        ingredient:
-                            created_at:
-                                1495221767
-                            display_plural:
-                                whipped toppings
-                            display_singular:
-                                whipped topping
-                            id:
-                                537
-                            name:
-                                whipped topping
-                            updated_at:
-                                1509035253
-                        measurements:
-                            [0]
-                                id:
-                                    790538
-                                quantity:
-<<<<<<< Updated upstream
-                                    Â½
-=======
-                                    0
->>>>>>> Stashed changes
-                                unit:
-                                    abbreviation:
-                                        
-                                    display_plural:
-                                        
-                                    display_singular:
-                                        
-                                    name:
-                                        
-                                    system:
-                                        none
-                        position:
-                            8
-                        raw_text:
-<<<<<<< Updated upstream
-                            Â½ cup basil pesto
-=======
-                            n/a
->>>>>>> Stashed changes
-                name:
-                    None
-                position:
-                    1
-        seo_path:
-            9295812,9299134,188967
-        seo_title:
-            Birthday Mug Cake 
-        servings_noun_plural:
-            servings
-        servings_noun_singular:
-            serving
-        show:
-            id:
-                17
-            name:
-                Tasty
-        show_id:
-            17
-        slug:
-            birthday-cake-mug-cake
-        tags:
-            [0]
-                display_name:
-                    North American
-                id:
-                    64444
-                name:
-                    north_american
-                parent_tag_name:
-                    cuisine
-                root_tag_type:
-                    cuisine
-                type:
-                    cuisine
-            [1]
-                display_name:
-                    Easy
-                id:
-                    64471
-                name:
-                    easy
-                parent_tag_name:
-                    difficulty
-                root_tag_type:
-                    difficulty
-                type:
-                    difficulty
-            [2]
-                display_name:
-                    Under 30 Minutes
-                id:
-                    64472
-                name:
-                    under_30_minutes
-                parent_tag_name:
-                    difficulty
-                root_tag_type:
-                    difficulty
-                type:
-                    difficulty
-            [3]
-                display_name:
-                    Desserts
-                id:
-                    64485
-                name:
-                    desserts
-                parent_tag_name:
-                    meal
-                root_tag_type:
-                    meal
-                type:
-                    meal
-            [4]
-                display_name:
-                    Kid-Friendly
-                id:
-                    64488
-                name:
-                    kid_friendly
-                parent_tag_name:
-                    cooking_style
-                root_tag_type:
-                    cooking_style
-                type:
-                    cooking_style
-            [5]
-                display_name:
-                    Baking
-                id:
-                    64492
-                name:
-                    baking
-                parent_tag_name:
-                    appliance
-                root_tag_type:
-                    appliance
-                type:
-                    appliance
-            [6]
-                display_name:
-                    Microwave
-                id:
-                    65845
-                name:
-                    microwave
-                parent_tag_name:
-                    appliance
-                root_tag_type:
-                    appliance
-                type:
-                    appliance
-            [7]
-                display_name:
-                    No Bake Desserts
-                id:
-                    65854
-                name:
-                    no_bake_desserts
-                parent_tag_name:
-                    cooking_style
-                root_tag_type:
-                    cooking_style
-                type:
-                    cooking_style
-            [8]
-                display_name:
-                    One-Pot or Pan
-                id:
-                    65855
-                name:
-                    one_pot_or_pan
-                parent_tag_name:
-                    cooking_style
-                root_tag_type:
-                    cooking_style
-                type:
-                    cooking_style
-            [9]
-                display_name:
-                    Special Occasion
-                id:
-                    188967
-                name:
-                    special_occasion
-                parent_tag_name:
-                    occasion
-                root_tag_type:
-                    seasonal
-                type:
-                    occasion
-            [10]
-                display_name:
-                    Measuring Spoons
-                id:
-                    1280508
-                name:
-                    measuring_spoons
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    equipment
-                type:
-                    equipment
-            [11]
-                display_name:
-                    Tasty EWD Fifteen
-                id:
-                    6117479
-                name:
-                    tasty_ewd_fifteen
-                parent_tag_name:
-                    None
-                root_tag_type:
-                    feature_page
-                type:
-                    feature_page
-            [12]
-                display_name:
-                    Under 15 Minutes
-                id:
-                    8091744
-                name:
-                    under_15_minutes
-                parent_tag_name:
-                    difficulty
-                root_tag_type:
-                    difficulty
-                type:
-                    difficulty
-            [13]
-                display_name:
-                    Under 45 Minutes
-                id:
-                    8091747
-                name:
-                    under_45_minutes
-                parent_tag_name:
-                    difficulty
-                root_tag_type:
-                    difficulty
-                type:
-                    difficulty
-            [14]
-                display_name:
-                    Under 1 Hour
-                id:
-                    8091748
-                name:
-                    under_1_hour
-                parent_tag_name:
-                    difficulty
-                root_tag_type:
-                    difficulty
-                type:
-                    difficulty
-            [15]
-                display_name:
-                    Gluten
-                id:
-                    10623589
-                name:
-                    gluten
-                parent_tag_name:
-                    ingredients_to_avoid
-                root_tag_type:
-                    ingredients_to_avoid
-                type:
-                    ingredients_to_avoid
-            [16]
-                display_name:
-                    Dairy
-                id:
-                    10623608
-                name:
-                    dairy
-                parent_tag_name:
-                    ingredients_to_avoid
-                root_tag_type:
-                    ingredients_to_avoid
-                type:
-                    ingredients_to_avoid
-        thumbnail_alt_text:
-            
-        thumbnail_url:
-            https://img.buzzfeed.com/thumbnailer-prod-us-east-1/d3e827192dcf4194bf61a6c151ffab52/BFV18819_MugCakesFourWays-FB.jpg
-        tips_and_ratings_enabled:
-            True
-        topics:
-            [0]
-                name:
-                    Kid Friendly
-                slug:
-                    kid-friendly
-            [1]
-                name:
-                    No Bake Desserts
-                slug:
-                    no-bake-desserts
-            [2]
-                name:
-                    One-Pot Recipes
-                slug:
-                    one-pot
-            [3]
-                name:
-                    Desserts
-                slug:
-                    desserts
-            [4]
-                name:
-                    American
-                slug:
-                    american
-        total_time_minutes:
-            7
-        total_time_tier:
-            display_tier:
-                Under 15 minutes
-            tier:
-                under_15_minutes
-        updated_at:
-            1560117600
-        user_ratings:
-            count_negative:
-                1220
-            count_positive:
-                5258
-            score:
-                0.8116702686014202
-        video_ad_content:
-            none
-        video_id:
-            14152
-        video_url:
-            https://vid.tasty.co/output/28419/low_1491348690.m3u8
-        yields:
-            Servings: 1
+{
+	"cuisine": {
+		"european": [
+			"Italian",
+			"Swedish",
+			"Mediterranean",
+			"British",
+			"German",
+			"French",
+			"Polish"
+		],
+		"asian": [
+			"Thai",
+			"Filipino",
+			"Taiwanese",
+			"Japanese",
+			"Korean",
+			"Laotian",
+			"Chinese",
+			"Indian",
+			"Vietnamese"
+		],
+		"cuisine": [
+			"Caribbean",
+			"Asian",
+			"European",
+			"North American",
+			"African",
+			"Jewish",
+			"Central & South American",
+			"Middle Eastern",
+			"Fusion",
+			"Indigenous"
+		],
+		"middle_eastern": [
+			"Lebanese",
+			"Persian"
+		],
+		"north_american": [
+			"Southern",
+			"Mexican",
+			"Hawaiian",
+			"Southwestern",
+			"Soul Food"
+		],
+		"caribbean": [
+			"Cuban",
+			"Dominican",
+			"Puerto Rican",
+			"Haitian",
+			"Jamaican"
+		],
+		"central_south_american": [
+			"Venezuelan",
+			"Brazilian",
+			"Peruvian"
+		],
+		"african": [
+			"Kenyan",
+			"South African",
+			"Ethiopian",
+			"West African"
+		]
+	},
+	"dietary": {
+		"dietary": [
+			"Vegetarian",
+			"Pescatarian",
+			"Kosher",
+			"Dairy-Free",
+			"Vegan",
+			"Keto",
+			"Alcohol-Free",
+			"Halal",
+			"Gluten-Free"
+		]
+	},
+	"difficulty": {
+		"difficulty": [
+			"Under 30 Minutes",
+			"Under 45 Minutes",
+			"5 Ingredients or Less",
+			"Easy",
+			"Under 1 Hour",
+			"Under 15 Minutes"
+		]
+	},
+	"seasonal": {
+		"holidays": [
+			"Valentine's Day",
+			"Passover",
+			"Lunar New Year",
+			"St. Patrick's Day",
+			"Cinco de Mayo",
+			"Mother's Day",
+			"New Years",
+			"4th of July",
+			"Christmas",
+			"Easter",
+			"Thanksgiving",
+			"Halloween"
+		],
+		"occasion": [
+			"Party",
+			"Date Night",
+			"Special Occasion",
+			"Picnic",
+			"BBQ",
+			"Game Day"
+		],
+		"seasonal": [
+			"Holidays",
+			"Occasion",
+			"Spring",
+			"Winter",
+			"Summer",
+			"Fall"
+		]
+	},
+	"meal": {
+		"meal": [
+			"Breakfast",
+			"Dinner",
+			"Appetizers",
+			"Brunch",
+			"Desserts",
+			"Drinks",
+			"Lunch",
+			"Snacks",
+			"Sides"
+		],
+		"breakfast": [
+			"Sweet Breakfasts",
+			"Egg Breakfasts",
+			"National Sandwich Day",
+			"Smoothies & Smoothie Bowls",
+			"Breakfast Sandwiches",
+			"Breads & Pastries",
+			"English Muffins",
+			"Better Breakfast",
+			"Beverages"
+		],
+		"salads": [
+			"Coleslaws",
+			"Dressings",
+			"Fruit Salads",
+			"Pasta Salads"
+		],
+		"dinner": [
+			"Beef",
+			"Stews",
+			"Stir Fry",
+			"Pork",
+			"Pot Roast",
+			"Soups",
+			"Seafood",
+			"Casseroles",
+			"Pizza",
+			"Chicken",
+			"Meat Loaf",
+			"Burgers",
+			"Kabobs",
+			"Quiches",
+			"Tacos & Burritos",
+			"Weeknight",
+			"Chilis",
+			"Pasta"
+		],
+		"pasta": [
+			"Lasagna",
+			"Macaroni & Cheese",
+			"Baked Pasta",
+			"Seafood Pasta"
+		],
+		"seafood": [
+			"Fish",
+			"Shellfish"
+		],
+		"desserts": [
+			"Pie and Cobblers",
+			"Puddings",
+			"Cookies",
+			"Pastries",
+			"Brownies",
+			"Cakes",
+			"Ice Cream"
+		],
+		"cocktails": [
+			"Gin",
+			"Rum",
+			"Tequila",
+			"Vodka",
+			"Whiskey"
+		],
+		"sweet_breakfasts": [
+			"Pancakes",
+			"Waffles"
+		],
+		"lunch": [
+			"Salads",
+			"Sandwiches",
+			"Sandwiches For Every Taste",
+			"Wraps"
+		],
+		"cakes": [
+			"Cupcakes",
+			"Cheesecakes"
+		],
+		"ice_cream": [
+			"Ice Cream Cakes",
+			"Ice Cream Sandwiches"
+		],
+		"drinks": [
+			"Cocktails",
+			"Coffee",
+			"Shakes",
+			"Mocktails",
+			"Juices"
+		],
+		"appetizers": [
+			"Sliders",
+			"Dips"
+		]
+	},
+	"cooking_style": {
+		"cooking_style": [
+			"Kid-Friendly",
+			"Big Batch",
+			"Pan Fry",
+			"Deep-Fry",
+			"Comfort Food",
+			"No Bake Desserts",
+			"Steam",
+			"Meal Prep",
+			"Grill",
+			"One-Pot or Pan",
+			"Budget"
+		]
+	},
+	"appliance": {
+		"appliance": [
+			"Blender",
+			"Microwave",
+			"Air Fryer",
+			"Baking",
+			"Broiler",
+			"Cast Iron Pan",
+			"Slow Cooker",
+			"Wok",
+			"Dutch Oven",
+			"Freezer Friendly",
+			"Bakery Goods"
+		],
+		"baking": [
+			"Bread",
+			"Rolls"
+		]
+	},
+	"healthy": {
+		"healthy": [
+			"Low-Calorie",
+			"High-Fiber",
+			"High-Protein",
+			"Low-Sugar",
+			"Low-Carb",
+			"Low-Fat"
+		]
+	},
+	"ingredients_to_avoid": {
+		"ingredients_to_avoid": [
+			"Seafood",
+			"Soy",
+			"Tree nuts",
+			"Beef",
+			"Chicken",
+			"Eggs",
+			"Dairy",
+			"Shellfish",
+			"Gluten",
+			"Pork",
+			"Peanuts"
+		]
+	}
+}
