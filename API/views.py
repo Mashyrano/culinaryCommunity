@@ -54,36 +54,47 @@ def logout_user(request):
 
 # ======== recipes ==============
 
-@login_required
 # return all recipes saved by user
+@login_required
 def my_recipes(request):
-    userQuery = User.objects.filter(username=request.user)
-    recipes =  SavedRecipe.objects.filter(user_id=userQuery.first())
-    myRecipesSerializer = SavedRecipeSeializer(recipes, many=True)
+    # Get the logged-in user's ID
+    user = request.user
+    saved_recipes = SavedRecipe.objects.filter(user_id=user)
+    
+    # Separate recipe IDs by source
     local_recipe_ids = []
     online_recipe_ids = []
-    local_recipes=[]
-
-    # go through recipes and check source
-    for link in myRecipesSerializer.data:
-        if link['recipe_source'] == 'local':
-            local_recipe_ids.append(link['recipe_id'])
+    for recipe in saved_recipes:
+        if recipe.recipe_source == 'local':
+            local_recipe_ids.append(recipe.recipe_id)
         else:
-            online_recipe_ids.append(link['recipe_id'])
+            online_recipe_ids.append(recipe.recipe_id)
 
-    if len(local_recipe_ids) == 0 and len(online_recipe_ids) == 0:
-        return JsonResponse('no recipes found', safe=False ,status=status.HTTP_404_NOT_FOUND)
-    
-    # if offline source query database and compile list 
+    # Fetch local recipes
+    local_recipes = []
     for recipe_id in local_recipe_ids:
         recipe = get_local_recipe(recipe_id)
         if recipe:
-            local_recipes.append(recipe)
+            local_recipes.append(normalize_recipe(recipe, 'local'))
 
-    # if online call the api and  compile
+    # Fetch online recipes
+    online_recipes = []
+    for recipe_id in online_recipe_ids:
+        try:
+            url = f"https://tasty.p.rapidapi.com/recipes/get-more-info?id={recipe_id}"
+            response = requests.get(url, headers=API_HEADERS)
+            if response.status_code == 200:
+                online_recipes.append(normalize_recipe(response.json(), 'online'))
+        except Exception as e:
+            # Log errors if needed
+            print(f"Failed to fetch online recipe with ID {recipe_id}: {e}")
 
-    # compile into one response and return response
-    return JsonResponse(local_recipes, safe=False ,status=status.HTTP_200_OK)
+    # Combine all recipes and return the response
+    combined_recipes = local_recipes + online_recipes
+    if not combined_recipes:
+        return JsonResponse({"error": "No recipes found"}, status=status.HTTP_404_NOT_FOUND)
+    
+    return JsonResponse(combined_recipes, safe=False, status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
@@ -151,6 +162,16 @@ def get_daily_random_recipe(request):
     else:
         return JsonResponse({"error": "Failed to fetch random recipe"}, status=response.status_code)
 
+@api_view(['GET'])
+def fetch_categories(request):
+    url = 'https://tasty.p.rapidapi.com/tags/list'
+    response = requests.get(url, headers=API_HEADERS)
+    if response.status_code == 200:
+        return JsonResponse(response.json(), safe=False, status=200)
+    else:
+        return JsonResponse('couldnot fetch tags', status=response.status_code)
+	
+
 # ============= Helper functions ===============
 def get_local_recipe(id):
     try:
@@ -163,3 +184,32 @@ def get_local_recipe(id):
         return serializer.data
     except Recipe.DoesNotExist:
         return None
+    
+def normalize_recipe(recipe, source):
+    """
+    Standardizes the recipe data for both local and online sources.
+    :param recipe: The raw recipe data (dict or model instance).
+    :param source: 'local' or 'online'.
+    :return: A dictionary with a consistent structure.
+    """
+    if source == 'local':
+        return {
+            "id": recipe.get('id'), 
+            "title": recipe.get('title'),
+            "description": recipe.get('description'),
+            "ingredients": recipe.get('ingredients', []),
+            "instructions": recipe.get('instructions', []),
+            "images": recipe.get('images', []),
+            "source": "local",
+        }
+    elif source == 'online':
+        return {
+            "id": recipe.get('id'),
+            "title": recipe.get('name'),
+            "description": recipe.get('description'),
+            "ingredients": recipe.get('sections', []),  # Adjust based on the API response
+            "instructions": recipe.get('instructions', []),
+            "images": [recipe.get('thumbnail_url')],
+            "source": "online",
+        }
+    return {}

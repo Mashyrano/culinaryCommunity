@@ -26,7 +26,14 @@ def recipe_search(request):
 # helper  functions
 def get_context():
     response = requests.get('http://127.0.0.1:8000/API/random_recipe')
-    print(response)
+    if response:
+        return {
+            "random" : response.json()
+        }
     return {
-        "random" : response.json()
+        "random":{
+            "name":"offline name",
+            "description":"offline description",
+            "thumbnail_url":"######"
+        }
     }
