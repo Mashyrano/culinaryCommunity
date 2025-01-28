@@ -5,11 +5,13 @@
 {% block content %}
 
 <div class="container banner">
-    <div class="row">
-        <div class="col rol-col-1 banner-name">
+    <div class="row row-col-1">
+        <img src={{random.thumbnail_url}} alt="A picture showing a catagory" class="banner-image">
+
+        <div class="col  banner-name">
             {{random.name}}
         </div>
-        <div class="col rol-col-1 banner-description">
+        <div class="col banner-description">
             <div class="excerpt">
                 <div class="excerpt-text">
                     {{random.description}}
@@ -29,7 +31,7 @@
 
     <div class="row">
         <div class="col">
-            <img src={{random.thumbnail_url}} alt="A picture showing a catagory">
+            <!-- <img src={{random.thumbnail_url}} alt="A picture showing a catagory"> -->
             <div class="excerpt">
                 <div class="excerpt-text">
                     #####
