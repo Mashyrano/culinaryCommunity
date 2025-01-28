@@ -5,22 +5,28 @@
 {% block content %}
 
 <div class="container banner">
-    <div class="row row-col-1">
-        <img src={{random.thumbnail_url}} alt="A picture showing a catagory" class="banner-image">
-
-        <div class="col  banner-name">
-            {{random.name}}
-        </div>
-        <div class="col banner-description">
-            <div class="excerpt">
-                <div class="excerpt-text">
-                    {{random.description}}
-                </div>
-                <div class="excerpt-more">
-                    <a href="##">Read more...</a>
+    <div class="row ">
+        <div class="col-md-4">
+            <div class="banner-name">
+                {{random.name}}
+            </div>
+            <div class="banner-description">
+                <div class="excerpt">
+                    <div class="excerpt-text">
+                        {{random.description}}
+                    </div>
+                    <div class="excerpt-more">
+                        <a href="##">Read more...</a>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="col-md-8">
+            <img src={{random.thumbnail_url}} alt="A picture showing a catagory" class="banner-image">
+        </div>
+
+       
     </div>
 </div>
 
@@ -31,15 +37,16 @@
 
     <div class="row">
         <div class="col">
-            <!-- <img src={{random.thumbnail_url}} alt="A picture showing a catagory"> -->
-            <div class="excerpt">
-                <div class="excerpt-text">
-                    #####
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-heading">########</p>
+                  <div class="excerpt-more">
+                    <button class="btn btn-primary-lg"><a href="##">Read more...</a></button>
                 </div>
-                <div class="excerpt-more">
-                    <button class="btn"><a href="##">Read more...</a></button>
                 </div>
-            </div> 
+              </div>
+
 
         </div>
 
