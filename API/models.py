@@ -69,3 +69,23 @@ class SavedRecipe(models.Model):
     recipe_source = models.CharField(max_length=50, choices=[('api', 'API'), ('local', 'Local')])
     recipe_name = models.CharField(max_length=100)
     saved_at = models.DateTimeField(auto_now_add=True)
+
+class Root_tags(models.Model):
+    name = models.CharField(max_length=50)
+    def __str__(self):
+        return self.name
+
+class Parent_tags(models.Model):
+    name = models.CharField(max_length=50)
+    root = models.ForeignKey(Root_tags, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name
+
+class Tags(models.Model):
+    name = models.CharField(max_length=50)
+    parent = models.ForeignKey(Parent_tags, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name
+
+
+    

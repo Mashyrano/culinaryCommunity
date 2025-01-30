@@ -8,6 +8,9 @@ from API.models import Recipe_nutrition
 from API.models import  Nutrition
 from API.models import Measurement
 from API.models import SavedRecipe
+from API.models import Root_tags
+from API.models import Parent_tags
+from API.models import Tags 
 # Register your models here.
 
 admin.site.register(Recipe)
@@ -19,3 +22,6 @@ admin.site.register(Recipe_nutrition)
 admin.site.register(Nutrition)
 admin.site.register(Measurement)
 admin.site.register(SavedRecipe)
+admin.site.register(Root_tags)
+admin.site.register(Parent_tags)
+admin.site.register(Tags)

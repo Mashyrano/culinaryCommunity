@@ -1,9 +1,10 @@
 import datetime
+import random
 import requests
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
-from .serializer import RecipeSerializer, SavedRecipeSeializer
-from .models import Recipe, SavedRecipe,Ingridient, Recipe_ingredient, Measurement, Instruction, Image, Nutrition, Recipe_nutrition
+from .serializer import RecipeSerializer, SavedRecipeSeializer, Root_tagsSerializer, Parent_tagsSerializer, TaggsSerializer
+from .models import Recipe, SavedRecipe, Root_tags, Parent_tags, Tags
 from rest_framework.response  import Response
 from rest_framework  import status
 from django.contrib.auth.models import User
@@ -96,7 +97,6 @@ def my_recipes(request):
     
     return JsonResponse(combined_recipes, safe=False, status=status.HTTP_200_OK)
 
-
 @api_view(['GET'])
 # get a local recipe by id
 def local_recipes(request, pk):
@@ -107,6 +107,22 @@ def local_recipes(request, pk):
     else:
         return Response({'error': 'Recipe not found'}, status=status.HTTP_404_NOT_FOUND)
     
+# Category of recipes
+@api_view(['GET'])
+def fetch_root_categories(request):
+    roots = Root_tags.objects.all()
+    serializer = Root_tagsSerializer(roots)
+    return  JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
+
+def fetch_parent_categories(request):
+    parents = Parent_tags.objects.all()
+    serializer = Parent_tagsSerializer(parents)
+    return  JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
+
+def fetch_categories(request):
+    tags = Tags.objects.all()
+    serializer = TaggsSerializer(tags)
+    return  JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
 
 
 #Online APIs
@@ -115,23 +131,65 @@ API_HEADERS = {
     "X-RapidAPI-Key": "1591f07ae7msh7f10f55f8f7af3dp1c379cjsn3c55198ef7a5",
     "X-RapidAPI-Host": "tasty.p.rapidapi.com"
 }
-# search a recipes by name
+# search a recipes by name or by tag
 def search_recipes(request):
     query = request.GET.get('query', '')
-    if query:
+    tags = request.GET.get('tags', '')
+    size = request.GET.get('size', 10)  # Default size to 10
+    recipe_list = []
+
+    if query or tags:
         params = {
-            "from": 0,   # Starting index
-            "size": 10,  # Number of recipes to fetch
-            "q": query   # Search query (e.g., "pasta")
+            "from": 0,
+            "size": size,
+            "q": query,
+            "tags": tags
         }
 
-        response = requests.get(url, headers=API_HEADERS, params=params)
+        try:
+            response = requests.get(url, headers=API_HEADERS, params=params)
+            if response.status_code == 200:
+                recipes = response.json()
+                recipe_list = [normalize_recipe(recipe, "online") for recipe in recipes.get('results', [])]
+                return JsonResponse(recipe_list, safe=False, status=status.HTTP_200_OK)
+            else:
+                return JsonResponse({"error": "Failed to fetch recipes"}, status=response.status_code)
+        except Exception as e:
+            return JsonResponse({"error": f"An error occurred: {str(e)}"}, status=500)
+    
+    return JsonResponse({"error": "Query or tag parameter is required"}, status=400)
 
+# for categories
+def search_recipes_lightweight(request):
+    tags = request.GET.get('tags', '')
+    if not tags:
+        return JsonResponse({"error": "Tag parameter is required"}, status=400)
+
+    params = {
+        "from": 0,
+        "size": 10,
+        "tags": tags
+    }
+
+    try:
+        response = requests.get(url, headers=API_HEADERS, params=params)
         if response.status_code == 200:
-            return JsonResponse(response.json())
+            recipes = response.json()
+            results = recipes.get('results', [])
+            if results:
+                # Extract random int url
+                random_indice = random.sample(range(len(results)), 1)
+                first_result = results[random_indice[0]]
+                thumbnail_url = first_result.get('thumbnail_url', '')
+                name = first_result.get('name', '')
+                return JsonResponse({"category": tags, "image": thumbnail_url, "name": name}, safe=False)
+            else:
+                return JsonResponse({"category": tags, "image": None}, safe=False)
         else:
             return JsonResponse({"error": "Failed to fetch recipes"}, status=response.status_code)
-    return JsonResponse({"error": "Query parameter is required"}, status=400)
+    except Exception as e:
+        return JsonResponse({"error": f"An error occurred: {str(e)}"}, status=500)
+
 
 # Search a recipe by ID
 @api_view(['GET'])
@@ -143,9 +201,6 @@ def get_recipe_by_id(request, pk):
         return JsonResponse(response.json(), safe=False, status=200)
     else:
         return JsonResponse({"error": "Failed to fetch recipe"}, status=response.status_code)
-
-# Search by Category of recipes
-
 
 # Fetch random recipe daily
 @api_view(['GET'])
@@ -161,16 +216,6 @@ def get_daily_random_recipe(request):
         return JsonResponse(response.json(), safe=False, status=200)
     else:
         return JsonResponse({"error": "Failed to fetch random recipe"}, status=response.status_code)
-
-@api_view(['GET'])
-def fetch_categories(request):
-    url = 'https://tasty.p.rapidapi.com/tags/list'
-    response = requests.get(url, headers=API_HEADERS)
-    if response.status_code == 200:
-        return JsonResponse(response.json(), safe=False, status=200)
-    else:
-        return JsonResponse('couldnot fetch tags', status=response.status_code)
-	
 
 # ============= Helper functions ===============
 def get_local_recipe(id):
@@ -192,9 +237,13 @@ def normalize_recipe(recipe, source):
     :param source: 'local' or 'online'.
     :return: A dictionary with a consistent structure.
     """
+    if not isinstance(recipe, dict):
+        print("Unexpected recipe format:", recipe)  # Debug unexpected types
+        return {}  # Skip non-dictionary recipes
+
     if source == 'local':
         return {
-            "id": recipe.get('id'), 
+            "id": recipe.get('id'),
             "title": recipe.get('title'),
             "description": recipe.get('description'),
             "ingredients": recipe.get('ingredients', []),
@@ -203,13 +252,14 @@ def normalize_recipe(recipe, source):
             "source": "local",
         }
     elif source == 'online':
+        sections = recipe.get('sections', [])
         return {
             "id": recipe.get('id'),
             "title": recipe.get('name'),
             "description": recipe.get('description'),
-            "ingredients": recipe.get('sections', []),  # Adjust based on the API response
+            "ingredients": sections if isinstance(sections, list) else [],
             "instructions": recipe.get('instructions', []),
-            "images": [recipe.get('thumbnail_url')],
+            "images": recipe.get('thumbnail_url'),
             "source": "online",
         }
     return {}

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Recipe, Ingridient, Recipe_ingredient, Measurement, Instruction, Image, Nutrition, Recipe_nutrition, SavedRecipe
+from .models import Recipe, Ingridient, Recipe_ingredient, Measurement, Instruction, Image, Nutrition, Recipe_nutrition, SavedRecipe,  Root_tags,  Parent_tags, Tags
 
 class MeasurementSerializer(serializers.ModelSerializer):
     class Meta:
@@ -60,3 +60,20 @@ class SavedRecipeSeializer(serializers.ModelSerializer):
         model = SavedRecipe
         fields = ['id','user','recipe_id','recipe_source','recipe_name','saved_at']
         read_only_fields = ['id','user','saved_at']
+
+class Root_tagsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Root_tags
+        fields = ['id', 'name']
+
+class Parent_tagsSerializer(serializers.ModelSerializer):
+    root = Root_tagsSerializer(source='root_id')
+    class Meta:
+        model = Parent_tags
+        fields = ['id', 'name', 'root']
+
+class TaggsSerializer(serializers.ModelSerializer):
+    parent = Parent_tagsSerializer(source='parent_id')
+    class Meta:
+        model = Parent_tags
+        fields = ['id', 'name', 'parent']
