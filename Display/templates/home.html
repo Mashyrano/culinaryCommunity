@@ -39,9 +39,9 @@
         {% for category in categories %}
         <div class="col">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{category.image}}" alt="Card image cap">
+                <img class="card-img-top" src="{{category.image_url}}" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-heading">{{category.category}}</p>
+                  <p class="card-heading">{{category.name}}</p>
                   <div class="excerpt-more">
                     <button class="btn btn-primary-lg"><a href="##">Read more...</a></button>
                   </div>

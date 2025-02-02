@@ -64,16 +64,16 @@ class SavedRecipeSeializer(serializers.ModelSerializer):
 class Root_tagsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Root_tags
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'image_url']
 
 class Parent_tagsSerializer(serializers.ModelSerializer):
-    root = Root_tagsSerializer(source='root_id')
+    root = Root_tagsSerializer()
     class Meta:
         model = Parent_tags
-        fields = ['id', 'name', 'root']
+        fields = ['id', 'name', 'root', 'image_url']
 
 class TaggsSerializer(serializers.ModelSerializer):
-    parent = Parent_tagsSerializer(source='parent_id')
+    parent = Parent_tagsSerializer()
     class Meta:
         model = Parent_tags
-        fields = ['id', 'name', 'parent']
+        fields = ['id', 'name', 'parent', 'image_url']

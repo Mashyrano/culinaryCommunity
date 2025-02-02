@@ -111,24 +111,30 @@ def local_recipes(request, pk):
 @api_view(['GET'])
 def fetch_root_categories(request):
     roots = Root_tags.objects.all()
-    serializer = Root_tagsSerializer(roots)
+    serializer = Root_tagsSerializer(roots, many=True)
     return  JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
 
+@api_view(['GET'])
 def fetch_parent_categories(request):
-    parents = Parent_tags.objects.all()
-    serializer = Parent_tagsSerializer(parents)
+    root = request.GET.get('root')
+    root_id = Root_tags.objects.filter(name=root)
+    parents = Parent_tags.objects.filter(root=root_id.first())
+    serializer = Parent_tagsSerializer(parents, many=True)
     return  JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
 
 def fetch_categories(request):
-    tags = Tags.objects.all()
-    serializer = TaggsSerializer(tags)
+    parent = request.GET.get('parent')
+    parent_id = Parent_tags.objects.filter(name=parent).first()
+    tags = Tags.objects.filter(parent=parent_id)
+    serializer = TaggsSerializer(tags, many=True)
     return  JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
 
 
 #Online APIs
 url = "https://tasty.p.rapidapi.com/recipes/list"
 API_HEADERS = {
-    "X-RapidAPI-Key": "1591f07ae7msh7f10f55f8f7af3dp1c379cjsn3c55198ef7a5",
+    "X-RapidAPI-Key": "7af5ecd32bmsh926189c0c2b057ap15ac7ajsn61dccf4b27aa",
+    #"X-RapidAPI-Key": "1591f07ae7msh7f10f55f8f7af3dp1c379cjsn3c55198ef7a5",
     "X-RapidAPI-Host": "tasty.p.rapidapi.com"
 }
 # search a recipes by name or by tag
@@ -263,3 +269,6 @@ def normalize_recipe(recipe, source):
             "source": "online",
         }
     return {}
+
+
+

@@ -1,3 +1,56 @@
+def fetch_image_from_api(tag_name):
+    tag_name = tag_name.lower().replace("-", " ")
+    url = f'http://127.0.0.1:8000/API/search_light/?tags={tag_name}'
+
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            time.sleep(0.5)
+            return data.get("image", None)
+        elif response.status_code == 429:  # Handle rate-limiting
+            print(f"Rate limit hit. Retrying for tag: {tag_name}")
+            time.sleep(5)  # Wait 5 seconds before retrying
+            return fetch_image_from_api(tag_name)
+    except Exception as e:
+        print(f"Error fetching image for tag {tag_name}: {e}")
+    return None
+
+
+def populate_images():
+    # Populate images for Tags
+    tags = Tags.objects.all()
+    for tag in tags:
+        if not tag.image_url:  # Only update if the field is empty
+            print(f"Fetching image for tag: {tag.name}")
+            tag.image_url = fetch_image_from_api(tag.name)
+            tag.save()
+
+    # Populate images for Parent_tags
+    parents = Parent_tags.objects.all()
+    for parent in parents:
+        if not parent.image_url:  # Only update if the field is empty
+            print(f"Fetching image for parent: {parent.name}")
+            # Get a random tag under this parent
+            random_tag = Tags.objects.filter(parent=parent).order_by('?').first()
+            if random_tag:
+                parent.image_url = fetch_image_from_api(random_tag.name)
+                parent.save()
+
+    # Populate images for Root_tags
+    roots = Root_tags.objects.all()
+    for root in roots:
+        if not root.image_url:  # Only update if the field is empty
+            print(f"Fetching image for root: {root.name}")
+            # Get a random parent under this root
+            random_parent = Parent_tags.objects.filter(root=root).order_by('?').first()
+            if random_parent:
+                # Get a random tag under this parent
+                random_tag = Tags.objects.filter(parent=random_parent).order_by('?').first()
+                if random_tag:
+                    root.image_url = fetch_image_from_api(random_tag.name)
+                    root.save()
+
 {
 	"cuisine": {
 		"european": [
@@ -266,7 +319,7 @@
 			"Low-Fat"
 		]
 	},
-	"ingredients_to_avoid": {
+	"	": {
 		"ingredients_to_avoid": [
 			"Seafood",
 			"Soy",
