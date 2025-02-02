@@ -16,17 +16,22 @@ body {
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
+  font-size: 1.5rem;
 }
 
 
 /* Header styling */
+
+header{
+    background-color: #fff8fe;
+}
+
 .intro{
-    background-color: #FF0000;
+    background-color: #A8DF8E;
     text-align: center;
     padding: 1%;
     font-weight: bold;
-    font-size: 1rem;
-    color: #ffffff;
+    color: #fff8fe;
 }
 
 .search{
@@ -35,38 +40,51 @@ body {
     width: 20%;
 }
 
-/* Footer styling */
-footer{
-    background-color: #97BE5A;
+nav{
+    padding: 5% 0;
 }
 
 
+/* Footer styling */
+footer{
+    background-color: #fff8fe;
+}
 
+.footer-logo{
+    padding: 5% 0;
+}
+
+
+.footer-icons{
+    padding: 5% 0;
+}
+
+.copyright{
+    display: flex;
+    justify-content: flex-end;
+}
 /*********************************** Home Page Styling ***********************************/
 
 /* Banner styling */
+.banner{
+    background-color: #fff8fe;
+    padding: 5% 0;
+}
+
+.banner-imageContainer{
+    display: flex;
+    justify-content: center;
+}
 
 .banner-image{
-    background-color: #ffff;
     max-width: 100%;
     height: 65%;
-    /* position: relative;
-    left: 0px;
-    top: 0px;
-    z-index: 0; */
 }
 
-/* .banner-name{
-    position: absolute;
-    z-index: 1;
-    bottom: 30%;
-}
 
-.banner-description{
-    position: absolute;
-    z-index: 1;
-    bottom: 10%;
-} */
+.banner-text{
+    padding-left: 5%;
+}
 
 
 .excerpt{
@@ -80,14 +98,19 @@ footer{
     -webkit-line-clamp: 3;
     /* 2 */
     -webkit-box-orient: vertical;
+    margin: 5% 0;
 }
 
-.excerpt-more{
-    font-size: 14px;
-    color: #337ab7;
-    text-decoration: underline;
+
+.excerpt-more :hover{
+    background-color: #000000;
+    color:#fff8fe ;
 }
 
+.banner-btn{
+    color: #000000;
+    text-decoration: none;
+}
 
 
 
@@ -126,9 +149,4 @@ footer{
 /*********************************** Recipe Page Styling ***********************************/
 
 /*********************************** Contact Page Styling ***********************************/
-
-
-h1 {
-    color: blueviolet;
-}
 

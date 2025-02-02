@@ -4,29 +4,28 @@
 
 {% block content %}
 
-<div class="container banner">
-    <div class="row ">
-        <div class="col-md-4">
-            <div class="banner-name">
-                {{random.name}}
-            </div>
-            <div class="banner-description">
-                <div class="excerpt">
-                    <div class="excerpt-text">
-                        {{random.description}}
-                    </div>
-                    <div class="excerpt-more">
-                        <a href="##">Read more...</a>
+<div class="container-fluid banner">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 banner-text">
+                <div class="banner-name">
+                    <h1 class='banner-heading'>{{random.name}}</h1>
+                </div>
+                <div class="banner-description">
+                    <div class="excerpt">
+                        <div class="excerpt-text">
+                            {{random.description}}
+                        </div>
+                        <div class="excerpt-more">
+                            <button class="btn btn-lg btn-outline-dark"><a href="##" class="banner-btn">Read more...</a></button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-md-8 banner-imageContainer">
+                <img src={{random.thumbnail_url}} alt="A picture showing a catagory" class="banner-image">
+            </div>
         </div>
-
-        <div class="col-md-8">
-            <img src={{random.thumbnail_url}} alt="A picture showing a catagory" class="banner-image">
-        </div>
-
-       
     </div>
 </div>
 
