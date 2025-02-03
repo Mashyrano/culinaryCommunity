@@ -248,25 +248,67 @@ def normalize_recipe(recipe, source):
         return {}  # Skip non-dictionary recipes
 
     if source == 'local':
+        nutrition_list = recipe.get('recipe_nutrition')
+        nutrition_dict = {}
+        for nutrition in nutrition_list:
+            nutrition_dict[nutrition.get('nutrition').get('name')] = nutrition.get('quantity')
+
         return {
-            "id": recipe.get('id'),
-            "title": recipe.get('title'),
-            "description": recipe.get('description'),
-            "ingredients": recipe.get('ingredients', []),
-            "instructions": recipe.get('instructions', []),
-            "images": recipe.get('images', []),
+            "id": recipe.get('id'), # matches 
+            "title": recipe.get('name'), # matches 
+            "description": recipe.get('description'), # matches 
+            "ingredients": recipe.get('recipe_ingredients', []), # matches 
+            "instructions": recipe.get('instructions', []), # matches 
+            "image": recipe.get('thumbnail', []), # matches 
+            "num_servings": recipe.get('num_servings', []),# matches 
+            "nutrition": nutrition_dict, # matches 
             "source": "local",
+            # user_ratings
+            # tips_summary #content
+            # credits # name
+            
         }
     elif source == 'online':
-        sections = recipe.get('sections', [])
+        # normalize ingredients list
+        ingredient_list = []
+        component_list = recipe.get('sections')[0].get('components')
+        for component in component_list:
+            ingredient_dict = {
+            'ingredient': {},
+            'measurements' : []
+            }
+            ingredient_dict['ingredient']['name'] = component.get('ingredient').get('name')
+            ingredient_dict['description'] = component.get('raw_text')
+            for measurement in component.get('measurements'):
+                ingredient_dict['measurements'].append({
+                    'abbreviation': measurement.get('unit').get('abbreviation'),
+                    'quantity': measurement.get('quantity'),
+                    'unit': measurement.get('unit').get('name')
+                })
+            ingredient_list.append(ingredient_dict)
+
+        # normalize instructions list
+        instructions = []
+        instruction_list = recipe.get('instructions')
+        for instruction in instruction_list:
+            instructions.append({
+                'step': instruction.get('position'),
+                'description' : instruction.get('display_text')
+            })
+
         return {
-            "id": recipe.get('id'),
-            "title": recipe.get('name'),
-            "description": recipe.get('description'),
-            "ingredients": sections if isinstance(sections, list) else [],
-            "instructions": recipe.get('instructions', []),
-            "images": recipe.get('thumbnail_url'),
+            "id": recipe.get('id'), # matches 
+            "title": recipe.get('name'), # matches 
+            "description": recipe.get('description'), # matches 
+            "ingredients": ingredient_list, # matches 
+            "instructions": instructions, # matches 
+            "image": recipe.get('thumbnail_url'), # matches 
+            "num_servings": recipe.get('num_servings', []),# matches 
+            "nutrition": recipe.get('nutrition', []), # matches 
             "source": "online",
+            # user_ratings
+            # tips_summary #content
+            # credits # name
         }
     return {}
 
