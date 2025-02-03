@@ -12,6 +12,12 @@ def home(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def archive(request):
+    return render(request, 'archive.html')
+
+def recipe(request):
+    return render(request, 'recipe.html')
+
 def recipe_search(request):
     query = request.GET.get('query', '')
     recipes = []

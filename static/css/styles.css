@@ -4,12 +4,6 @@
 }
 
 /*********************************** Basic Styling ***********************************/
-.lobster-regular {
-    font-family: "Lobster", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
 
 body {
   font-family: "DM Sans", serif;
@@ -17,6 +11,13 @@ body {
   font-weight: normal;
   font-style: normal;
   font-size: 1.5rem;
+}
+
+h1, h3, h2{
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 2% 0 ;
 }
 
 
@@ -113,40 +114,42 @@ footer{
 }
 
 
+.card{
+    width: 15rem;
+    
+}
 
+/* .card-image{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  
+} */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.card-img-top{
+    height: 15rem;
+    object-fit: cover;
+}
 
 
 /*********************************** Archive Page Styling ***********************************/
+.archive-btn-group{
+    padding: 2%;
+    background-color: #fff8fe;
+}
 
+.archive{
+    background-color: #A8DF8E;
+    padding: 5% 0;
+}
 /*********************************** Recipe Page Styling ***********************************/
+
+.individual-recipe{
+    background-color: #A8DF8E;
+}
+
+
+
 
 /*********************************** Contact Page Styling ***********************************/
 

@@ -3,5 +3,41 @@
 
 
 {% block content %}
+<div class="container-fluid archive-btn-group">
+    <div class="row">
+        <div class="btn-group" role="group" aria-label="Basic">
+            <button type="button" class="btn btn-dark-lg">Category 1</button>
+            <button type="button" class="btn btn-dark-lg">Category 1</button>
+            <button type="button" class="btn btn-dark-lg">Category 1</button>
+            <button type="button" class="btn btn-dark-lg">Category 1</button>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid archive">
+    <div class="container ">
+        <div class="row">
+            {% for category in categories %}
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="{{category.image_url}}" alt="Card image cap">
+                    <div class="card-body">
+                    <h3 class="card-heading">{{category.name}}</h3>
+                    <div class="excerpt-more">
+                        <button class="btn btn-primary-lg"><a href="##">Read more...</a></button>
+                        <button class="btn btn-primary-lg"><a href="##">Explore Category...</a></button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+
+
+
 
 {% endblock %}
