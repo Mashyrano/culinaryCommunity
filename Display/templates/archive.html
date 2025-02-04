@@ -25,7 +25,10 @@
                     <h3 class="card-heading">{{category.name}}</h3>
                     <div class="excerpt-more">
                         <button class="btn btn-primary-lg"><a href="##">Read more...</a></button>
-                        <button class="btn btn-primary-lg"><a href="##">Explore Category...</a></button>
+                        <form method="get" action="{% url 'explore' category.name%}">
+                            <input type="hidden" name="source" value="{{source}}">
+                            <button type="submit" class="btn btn-primary-lg">Explore Category</button>
+                        </form>
                     </div>
                     </div>
                 </div>

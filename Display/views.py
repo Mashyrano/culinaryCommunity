@@ -12,8 +12,39 @@ def home(request):
 def contact(request):
     return render(request, 'contact.html')
 
+#### root categories ######
 def archive(request):
-    return render(request, 'archive.html')
+    response = requests.get('http://127.0.0.1:8000/API/root_categories/')
+    if response.status_code == 200:
+        context = {
+            "categories"  :  response.json(),
+            "source" : "root"
+        }
+    return render(request, 'archive.html', context)
+#### parent categories ######
+def explore(request, tag):
+    context = {}
+    source = request.GET.get('source')
+    if source == 'root':
+        response = requests.get(f'http://127.0.0.1:8000/API/parent_categories?root={tag}')
+        if response.status_code == 200:
+            context = {
+            "categories"  :  response.json(),
+            "source" : "parent"
+        }
+
+    elif source == 'parent':
+        response = requests.get(f'http://127.0.0.1:8000/API/tags?parent={tag}')
+        if response.status_code == 200:
+            context = {
+            "categories"  :  response.json(),
+            "source" : "tag"
+        }
+
+    elif source == 'tag':
+        response = requests.get(f'http://127.0.0.1:8000/API/search?tags={tag.lower().replace('&', 'and')}&size=10&from=0')
+       
+    return render(request, 'archive.html', context)
 
 def recipe(request):
     return render(request, 'recipe.html')

@@ -118,9 +118,12 @@ def fetch_root_categories(request):
 def fetch_parent_categories(request):
     root = request.GET.get('root')
     root_id = Root_tags.objects.filter(name=root)
-    parents = Parent_tags.objects.filter(root=root_id.first())
-    serializer = Parent_tagsSerializer(parents, many=True)
-    return  JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
+    try:
+        parents = Parent_tags.objects.filter(root=root_id.first())
+        serializer = Parent_tagsSerializer(parents, many=True)
+        return  JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
+    except Exception as e:
+        return  JsonResponse(f"not fund + {e}", safe=False, status=status.HTTP_404_NOT_FOUND)
 
 def fetch_categories(request):
     parent = request.GET.get('parent')
