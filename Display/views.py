@@ -12,6 +12,9 @@ def home(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def singles(request):
+    return render(request, 'singles.html')
+
 #### root categories ######
 def archive(request):
     response = requests.get('http://127.0.0.1:8000/API/root_categories/')

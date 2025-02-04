@@ -96,8 +96,7 @@ footer{
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
-    /* 2 */
+    /* -webkit-line-clamp: 3; */
     -webkit-box-orient: vertical;
     margin: 5% 0;
 }
@@ -116,15 +115,15 @@ footer{
 
 .card{
     width: 15rem;
-    
+    margin-bottom: 20%;
+    padding-bottom: 5%;
 }
 
-/* .card-image{
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  
-} */
+
+.cat-btn{
+    color: #000000;
+    text-decoration: none;
+}
 
 .card-img-top{
     height: 15rem;
@@ -132,6 +131,9 @@ footer{
 }
 
 
+.catagories{
+    background-color: #A8DF8E;
+}
 /*********************************** Archive Page Styling ***********************************/
 .archive-btn-group{
     padding: 2%;

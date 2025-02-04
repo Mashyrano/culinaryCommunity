@@ -3,16 +3,6 @@
 
 
 {% block content %}
-<div class="container-fluid archive-btn-group">
-    <div class="row">
-        <div class="btn-group" role="group" aria-label="Basic">
-            <button type="button" class="btn btn-dark-lg">Category 1</button>
-            <button type="button" class="btn btn-dark-lg">Category 1</button>
-            <button type="button" class="btn btn-dark-lg">Category 1</button>
-            <button type="button" class="btn btn-dark-lg">Category 1</button>
-        </div>
-    </div>
-</div>
 
 <div class="container-fluid archive">
     <div class="container ">
@@ -23,13 +13,10 @@
                     <img class="card-img-top" src="{{category.image_url}}" alt="Card image cap">
                     <div class="card-body">
                     <h3 class="card-heading">{{category.name}}</h3>
-                    <div class="excerpt-more">
-                        <button class="btn btn-primary-lg"><a href="##">Read more...</a></button>
-                        <form method="get" action="{% url 'explore' category.name%}">
-                            <input type="hidden" name="source" value="{{source}}">
-                            <button type="submit" class="btn btn-primary-lg">Explore Category</button>
-                        </form>
-                    </div>
+                    <form method="get" action="{% url 'explore' category.name%}">
+                        <input type="hidden" name="source" value="{{source}}">
+                        <button type="submit" class="btn btn-outline-dark btn-md">Explore Category</button>
+                    </form>
                     </div>
                 </div>
             </div>
