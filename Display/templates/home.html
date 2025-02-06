@@ -43,7 +43,10 @@
                 </div>
                 <div class="card-body">
                     <h3 class="card-heading">{{category.name}}</h3>
-                    <button class="btn btn-outline-dark btn-lg"><a href="##" class="cat-btn">Read more...</a></button>
+                    <form method="get" action="{% url 'recipes'%}">
+                        <input type="hidden" name="query" value="{{ category.name }}">
+                        <button type="submit" class="btn btn-outline-dark btn-lg">Read more...</button>
+                    </form>
                 </div>
               </div>
         </div>

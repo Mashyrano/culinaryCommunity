@@ -4,6 +4,7 @@ from django.shortcuts import render
 import requests
 from API.serializer import TaggsSerializer
 from API.models import Tags
+from django.core.paginator import Paginator
 
 def home(request):
     context = get_context()
@@ -12,7 +13,7 @@ def home(request):
 def contact(request):
     return render(request, 'contact.html')
 
-def singles(request):
+def single_recipe(request, pk):
     return render(request, 'singles.html')
 
 #### root categories ######
@@ -45,12 +46,28 @@ def explore(request, tag):
         }
 
     elif source == 'tag':
-        response = requests.get(f'http://127.0.0.1:8000/API/search?tags={tag.lower().replace('&', 'and')}&size=10&from=0')
-       
-    return render(request, 'archive.html', context)
+        response = requests.get(f'http://127.0.0.1:8000/API/search?tags={tag.lower().replace('&', 'and').replace('-', ' ')}&size=10&from=0')
+        if response.status_code == 200:
+            context = {
+            "recipes"  :  response.json(),
+            "source" : "tag"
+        }
+        else:
+            context = {
+                    "recipes" :   [{
+                        "title":"offline title",
+                        "image":"hhttp://ghhjsd.cb",
+                        "description":"offline description",
+                        "nutrition": {
+                            "offline":"offline"
+                        }
+                    }],
+                    "source" : "recipe"
+                    }
+        return render(request, 'recipe.html', context)
 
-def recipe(request):
-    return render(request, 'recipe.html')
+
+    return render(request, 'archive.html', context)
 
 def recipe_search(request):
     query = request.GET.get('query', '')
@@ -60,9 +77,27 @@ def recipe_search(request):
         # Call the API to get recipe data
         response = requests.get(f'http://127.0.0.1:8000/API/search/?query={query}')
         if response.status_code == 200:
-            recipes = response.json().get('results', [])
+            recipes = response.json()
+            # Paginate recipes (10 per page)
+            paginator = Paginator(recipes, 3)
+            page_number = request.GET.get("page", 1)
+            page_obj = paginator.get_page(page_number)
+            return render(request, "recipes.html", {"page_obj": page_obj, 'query': query})
+        elif response.status_code == 500:
+            recipes = [
+                {
+                    "title":"offline title",
+                    "image":"hhttp://ghhjsd.cb",
+                    "description":"offline description",
+                    "nutrition": {
+                        "offline":"offline"
+                    }
+
+                }
+
+                ]
     
-    return render(request, 'recipe_search.html', {'recipes': recipes, 'query': query})
+    return render(request, 'recipe.html', {'recipes': recipes, 'query': query})
 
 # helper  functions
 def get_context():

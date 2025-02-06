@@ -4,37 +4,49 @@
 
 {% block content %}
 <div class="container recipe">
+    {%for recipe in page_obj%}
     <div class="row">
         <div class="col">
             <h3 class="recipe-heading">
-                ######
+               {{recipe.title}}
             </h3>
-            <!-- image here -->
+            <img src="{{recipe.image}}" alt="recipe image">
         </div>
         <div class="col">
-            <h3 class="recipe-description-heading">
-                ######
-            </h3>
             <p class="recipe-description-text">
-                #####
+                {{recipe.description}}
             </p>
         </div>
         <div class="col">
-            <h3 class="recipe-ingredients-heading">
-                ######
-            </h3>
-            <p class="recipe-ingredients-text">
-                #####
-            </p>
-        </div>
-        <div class="col">
-            <h3 class="recipe-nutrients-heading">
-                ######
-            </h3>
             <p class="recipe-nutrients-text">
-                #####
+                {% for key, value in recipe.nutrition.items %}
+                    <span>{{ key }}: {{ value }}</span><br>
+                {% endfor %}
             </p>
         </div>
+        
+    </div>
+    {% endfor %}
+    <!-- Pagination Controls -->
+    <div>
+        {% if page_obj.has_previous %}
+            <a href="?page=1">First</a>
+            <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        <!-- Show page numbers -->
+        {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+                <strong>{{ num }}</strong>
+            {% elif num > page_obj.number|add:"-3" and num < page_obj.number|add:"3" %}
+                <a href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">Next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
     </div>
 </div>
 
