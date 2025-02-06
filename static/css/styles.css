@@ -150,8 +150,26 @@ footer{
     background-color: #A8DF8E;
 }
 
+.recipe-img{
+    width: 100%;
+    height: 100%;
+}
 
+.recipe-container{
+    margin-bottom: 10%;
+    border: 0.5rem solid #A8DF8E;
+    padding: 0 2% 2% 2%;
+}
 
+.recipe-content{
+    display: flex;
+    justify-content: space-between;
+}
 
+/* .recipe-description-text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } */
 /*********************************** Contact Page Styling ***********************************/
 

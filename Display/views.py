@@ -79,10 +79,10 @@ def recipe_search(request):
         if response.status_code == 200:
             recipes = response.json()
             # Paginate recipes (10 per page)
-            paginator = Paginator(recipes, 3)
-            page_number = request.GET.get("page", 1)
-            page_obj = paginator.get_page(page_number)
-            return render(request, "recipes.html", {"page_obj": page_obj, 'query': query})
+            #paginator = Paginator(recipes, 3)
+            #page_number = request.GET.get("page", 1)
+            #page_obj = paginator.get_page(page_number)
+            #return render(request, "recipe.html", {"page_obj": page_obj, 'query': query})
         elif response.status_code == 500:
             recipes = [
                 {
