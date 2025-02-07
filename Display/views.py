@@ -13,6 +13,9 @@ def home(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def login(request):
+    return render(request, 'account/login.html')
+
 def single_recipe(request, pk):
     return render(request, 'singles.html')
 

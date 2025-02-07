@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title %} Contact Page {% endblock %}
+
 
 {% block content %}
  
@@ -12,19 +14,23 @@
                 <input type="name" class="form-control" id="exampleInputPassword1" placeholder="Full Name">
             </div>
             <div class="form-group">
-                <label for="FormControlTextarea1">We would love to know why you're so interested in food, please tell us.</label>
-                <textarea class="form-control" id="FormControlTextarea1" rows="5"></textarea>
-            </div>
+              <label for="age" class="form-label">Age</label>
+              <input type="number" class="form-control" id="age" name="age" min="1" max="120" placeholder="Your Age" required>
+            </div>            
             <div class="form-group">
                 <label for="InputEmail1">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
               </div>
               <div class="form-group">
                 <label for="InputPassword1">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               </div>
-            <button type="submit" class="btn btn-dark-md">Submit</button>
+              <div class="form-group">
+                <label for="FormControlTextarea1">Talk to us...</label>
+                <textarea class="form-control" id="FormControlTextarea1" rows="5" placeholder="We would love to know why you're so interested in food, please tell us."></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-dark btn-md " >Submit</button>
           </form>
     </div>
 </div>

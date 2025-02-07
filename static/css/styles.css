@@ -24,11 +24,11 @@ h1, h3, h2{
 /* Header styling */
 
 header{
-    background-color: #fff8fe;
+    background-color: #FEFDED;
 }
 
 .intro{
-    background-color: #A8DF8E;
+    background-color: #C6EBC5;
     text-align: center;
     padding: 1%;
     font-weight: bold;
@@ -41,9 +41,10 @@ header{
     width: 20%;
 }
 
-nav{
-    padding: 5% 0;
-}
+/* .navbar-nav{
+    justify-content: end;
+} */
+
 
 
 /* Footer styling */
@@ -68,7 +69,7 @@ footer{
 
 /* Banner styling */
 .banner{
-    background-color: #fff8fe;
+    background-color: #FEFDED;
     padding: 5% 0;
 }
 
@@ -102,13 +103,17 @@ footer{
 }
 
 
-.excerpt-more :hover{
-    background-color: #000000;
-    color:#fff8fe ;
+.banner-btn :hover{
+    background-color: #FEFDED;
+    color:#FA7070 ;
 }
 
 .banner-btn{
-    color: #000000;
+    background-color: #FA7070;
+}
+
+.banner-link{
+    color: #FEFDED;
     text-decoration: none;
 }
 
@@ -132,7 +137,7 @@ footer{
 
 
 .catagories{
-    background-color: #A8DF8E;
+    background-color: #FA7070;
 }
 /*********************************** Archive Page Styling ***********************************/
 .archive-btn-group{
@@ -173,3 +178,11 @@ footer{
   } */
 /*********************************** Contact Page Styling ***********************************/
 
+.form-control{
+    width: 70%;
+    margin-bottom: 5%;
+}
+
+.form{
+    padding: 5%;
+}
