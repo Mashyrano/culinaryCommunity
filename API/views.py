@@ -13,6 +13,11 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 
 
+
+from django.db.models import F
+from concurrent.futures import ThreadPoolExecutor
+
+
 #Offline APIs
 
 # ======== account ==============
@@ -56,46 +61,46 @@ def logout_user(request):
 # ======== recipes ==============
 
 # return all recipes saved by user
+
 @login_required
 def my_recipes(request):
-    # Get the logged-in user's ID
     user = request.user
-    saved_recipes = SavedRecipe.objects.filter(user_id=user)
-    
-    # Separate recipe IDs by source
-    local_recipe_ids = []
-    online_recipe_ids = []
-    for recipe in saved_recipes:
-        if recipe.recipe_source == 'local':
-            local_recipe_ids.append(recipe.recipe_id)
-        else:
-            online_recipe_ids.append(recipe.recipe_id)
 
-    # Fetch local recipes
-    local_recipes = []
-    for recipe_id in local_recipe_ids:
-        recipe = get_local_recipe(recipe_id)
-        if recipe:
-            local_recipes.append(normalize_recipe(recipe, 'local'))
+    # Fetch saved recipe IDs and sources efficiently
+    saved_recipes = SavedRecipe.objects.filter(user_id=user).values_list("recipe_id", "recipe_source")
 
-    # Fetch online recipes
-    online_recipes = []
-    for recipe_id in online_recipe_ids:
+    # Separate recipe IDs by source using dictionary grouping
+    recipe_groups = {"local": [], "api": []}
+    for recipe_id, source in saved_recipes:
+        recipe_groups[source].append(recipe_id)
+
+    # Fetch local recipes in batch
+    local_recipes = [
+        normalize_recipe(recipe, "local")
+        for recipe in map(get_local_recipe, recipe_groups["local"])
+        if recipe  # Ensure recipe is not None
+    ]
+
+    # Fetch online recipes concurrently
+    def fetch_online_recipe(recipe_id):
         try:
             url = f"https://tasty.p.rapidapi.com/recipes/get-more-info?id={recipe_id}"
             response = requests.get(url, headers=API_HEADERS)
-            if response.status_code == 200:
-                online_recipes.append(normalize_recipe(response.json(), 'online'))
+            return normalize_recipe(response.json(), "online") if response.status_code == 200 else None
         except Exception as e:
-            # Log errors if needed
-            print(f"Failed to fetch online recipe with ID {recipe_id}: {e}")
+            print(f"Failed to fetch online recipe {recipe_id}: {e}")
+            return None
 
-    # Combine all recipes and return the response
+    with ThreadPoolExecutor() as executor:
+        online_recipes = list(filter(None, executor.map(fetch_online_recipe, recipe_groups["api"])))
+
+    # Combine results and return response
     combined_recipes = local_recipes + online_recipes
     if not combined_recipes:
         return JsonResponse({"error": "No recipes found"}, status=status.HTTP_404_NOT_FOUND)
-    
+
     return JsonResponse(combined_recipes, safe=False, status=status.HTTP_200_OK)
+
 
 @api_view(['GET'])
 # get a local recipe by id
@@ -248,72 +253,72 @@ def normalize_recipe(recipe, source):
     """
     if not isinstance(recipe, dict):
         print("Unexpected recipe format:", recipe)  # Debug unexpected types
-        return {}  # Skip non-dictionary recipes
+        return {}  
 
     if source == 'local':
-        nutrition_list = recipe.get('recipe_nutrition')
-        nutrition_dict = {}
-        for nutrition in nutrition_list:
-            nutrition_dict[nutrition.get('nutrition').get('name')] = nutrition.get('quantity')
+        # Convert nutrition list to a dictionary
+        nutrition_dict = {
+            item.get('nutrition', {}).get('name'): item.get('quantity')
+            for item in recipe.get('recipe_nutrition', []) if item.get('nutrition')
+        }
 
         return {
-            "id": recipe.get('id'), # matches 
-            "title": recipe.get('name'), # matches 
-            "description": recipe.get('description'), # matches 
-            "ingredients": recipe.get('recipe_ingredients', []), # matches 
-            "instructions": recipe.get('instructions', []), # matches 
-            "image": recipe.get('thumbnail', []), # matches 
-            "num_servings": recipe.get('num_servings', []),# matches 
-            "nutrition": nutrition_dict, # matches 
+            "id": recipe.get("id"),
+            "title": recipe.get("name"),
+            "description": recipe.get("description"),
+            "ingredients": recipe.get("recipe_ingredients", []),
+            "instructions": recipe.get("instructions", []),
+            "image": recipe.get("thumbnail", []),
+            "num_servings": recipe.get("num_servings"),
+            "nutrition": nutrition_dict,
+            "user_ratings": recipe.get("rating_score"),
+            "credit": recipe.get("credit_name"),
             "source": "local",
-            # user_ratings
-            # tips_summary #content
-            # credits # name
-            
         }
-    elif source == 'online':
-        # normalize ingredients list
-        ingredient_list = []
-        component_list = recipe.get('sections')[0].get('components')
-        for component in component_list:
-            ingredient_dict = {
-            'ingredient': {},
-            'measurements' : []
-            }
-            ingredient_dict['ingredient']['name'] = component.get('ingredient').get('name')
-            ingredient_dict['description'] = component.get('raw_text')
-            for measurement in component.get('measurements'):
-                ingredient_dict['measurements'].append({
-                    'abbreviation': measurement.get('unit').get('abbreviation'),
-                    'quantity': measurement.get('quantity'),
-                    'unit': measurement.get('unit').get('name')
-                })
-            ingredient_list.append(ingredient_dict)
 
-        # normalize instructions list
-        instructions = []
-        instruction_list = recipe.get('instructions')
-        for instruction in instruction_list:
-            instructions.append({
-                'step': instruction.get('position'),
-                'description' : instruction.get('display_text')
-            })
+    elif source == 'online':
+        # Normalize ingredients list
+        ingredients = [
+            {
+                "ingredient": {"name": component.get("ingredient", {}).get("name")},
+                "description": component.get("raw_text"),
+                "measurements": [
+                    {
+                        "abbreviation": measurement.get("unit", {}).get("abbreviation"),
+                        "quantity": measurement.get("quantity"),
+                        "unit": measurement.get("unit", {}).get("name"),
+                    }
+                    for measurement in component.get("measurements", [])
+                ],
+            }
+            for component in recipe.get("sections", [{}])[0].get("components", [])
+        ]
+
+        # Normalize instructions list
+        instructions = [
+            {
+                "step": instruction.get("position"),
+                "description": instruction.get("display_text"),
+            }
+            for instruction in recipe.get("instructions", [])
+        ]
 
         return {
-            "id": recipe.get('id'), # matches 
-            "title": recipe.get('name'), # matches 
-            "description": recipe.get('description'), # matches 
-            "ingredients": ingredient_list, # matches 
-            "instructions": instructions, # matches 
-            "image": recipe.get('thumbnail_url'), # matches 
-            "num_servings": recipe.get('num_servings', []),# matches 
-            "nutrition": recipe.get('nutrition', []), # matches 
+            "id": recipe.get("id"),
+            "title": recipe.get("name"),
+            "description": recipe.get("description"),
+            "ingredients": ingredients,
+            "instructions": instructions,
+            "image": recipe.get("thumbnail_url"),
+            "num_servings": recipe.get("num_servings"),
+            "nutrition": recipe.get("nutrition", {}),
+            "user_ratings": recipe.get("user_ratings", {}).get("score"),
+            "credit": recipe.get("credits", [{}])[0].get("name"),
             "source": "online",
-            # user_ratings
-            # tips_summary #content
-            # credits # name
         }
+
     return {}
+
 
 
 
