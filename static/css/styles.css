@@ -41,6 +41,9 @@ header{
     width: 20%;
 }
 
+.sign-in-btn{
+    display: inline;
+}
 /* .navbar-nav{
     justify-content: end;
 } */
@@ -49,17 +52,14 @@ header{
 
 /* Footer styling */
 footer{
-    background-color: #fff8fe;
+    background-color: #FEFDED;
 }
 
 .footer-logo{
-    padding: 5% 0;
+    padding: 2% 0;
 }
 
 
-.footer-icons{
-    padding: 5% 0;
-}
 
 .copyright{
     display: flex;
