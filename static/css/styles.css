@@ -70,7 +70,7 @@ footer{
 /* Banner styling */
 .banner{
     background-color: #FEFDED;
-    padding: 5% 0;
+    padding: 5% 0 0 0;
 }
 
 .banner-imageContainer{
@@ -106,6 +106,7 @@ footer{
 .banner-btn :hover{
     background-color: #FEFDED;
     color:#FA7070 ;
+    border: 1px solid #000000;
 }
 
 .banner-btn{
@@ -133,11 +134,17 @@ footer{
 .card-img-top{
     height: 15rem;
     object-fit: cover;
+    background-color: #FEFDED;
 }
 
 
 .catagories{
     background-color: #FA7070;
+    padding: 5% 0;
+}
+
+.catagories-heading{
+    color: #FEFDED;
 }
 /*********************************** Archive Page Styling ***********************************/
 .archive-btn-group{
@@ -178,11 +185,62 @@ footer{
   } */
 /*********************************** Contact Page Styling ***********************************/
 
-.form-control{
+.contact-form{
     width: 70%;
     margin-bottom: 5%;
 }
 
 .form{
     padding: 5%;
+}
+
+.contact-sumbit-btn{
+    margin-top: 5%;
+}
+
+
+
+
+/*********************************** Login Page Styling ***********************************/
+.login-page{
+    background-color: #FA7070;
+    display: grid;
+    place-items: center; /* Centers both horizontally and vertically */
+    height: 100vh;
+}
+
+.login{
+    padding: 5%;
+    margin: auto;
+    background-color: #fff8fe;
+    width: 50%;
+    border-radius: 3%;
+}
+
+.login-form{
+    margin-bottom: 5%;
+}
+
+.forgot{
+    color: #000000;
+    text-decoration: none;
+}
+
+.forgot:hover{
+    border: 1px solid #000000;
+    padding: 2%;
+    border-radius: 3%;
+}
+
+.login-submit-btn{
+    background-color: #FA7070;
+    color: #FEFDED;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.login-submit-btn:hover{
+    background-color: #FEFDED;
+    color: #000000;
+    border: 1px solid #000000;
 }
