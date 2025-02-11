@@ -1,10 +1,14 @@
 import random
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.http import JsonResponse
 import requests
 from API.serializer import TaggsSerializer
 from API.models import Tags
 from django.core.paginator import Paginator
+from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import AuthenticationForm
+from rest_framework  import status
+from rest_framework.decorators import api_view
 
 def home(request):
     context = get_context()
@@ -13,8 +17,22 @@ def home(request):
 def contact(request):
     return render(request, 'contact.html')
 
-def login(request):
-    return render(request, 'account/login.html')
+def login_view(request):
+    if request.method == "POST":
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('home')  # Redirect to home or dashboard
+    else:
+        form = AuthenticationForm()
+
+    return render(request, "account/login.html", {"form": form})
+
+@api_view(['POST'])
+def logout_user(request):
+    logout(request)
+    return redirect('home')
 
 def single_recipe(request, pk):
     return render(request, 'singles.html')

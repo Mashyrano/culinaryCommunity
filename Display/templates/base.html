@@ -23,12 +23,19 @@
 </head>
 <body>
   <header class="header">
+    {% if not user.is_authenticated %}
     <div class="intro">Your recipes, your page...sign up here!!!
       <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
         <button type="submit"><img width="35" height="35" src="https://img.icons8.com/dusk/35/enter-2.png" alt="enter-2"/></button>
       </form>
     </div>
+    {% else %}
+      <form method="POST" action="{% url 'logout' %}" style="display: inline;">
+        {% csrf_token %}
+        <button type="submit" class="auth-button">Logout</button>
+      </form>
+    {% endif %}
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand" href="/"> <img src=" {% static 'images/cclogo.png' %}" alt="The logo of the website"> </a>

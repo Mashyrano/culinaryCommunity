@@ -21,6 +21,7 @@
 {% block content %}
  
 <div class="container login">
+<<<<<<< Updated upstream
     <form>
         <div class="form-group">
             <label for="username" class="form-label">Username</label>
@@ -38,6 +39,12 @@
         <div class="text-center mt-3">
             <a href="#" class="forgot">Forgot password?</a>
         </div>
+=======
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+>>>>>>> Stashed changes
     </form>
 </div>
 
