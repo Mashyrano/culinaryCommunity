@@ -5,37 +5,46 @@
 
 
 {% block content %}
-<div class="container recipe">
-    {%for recipe in recipes%}
-    <div class="row row-cols-1 recipe-container">
-        <div class="col">
-            <h3 class="recipe-heading">
-                {{recipe.title}}
-            </h3>
-            <hr>
-        </div>
-        <div class="col">
-            <div class="row recipe-content">
-                <div class="col">
-                    <img src="{{recipe.image}}" alt="recipe image" class="recipe-img">
-                </div>
-                <div class="col">
-                    <p class="recipe-description-text">
-                        {{recipe.description}}
-                    </p>
-                </div>
-                <div class="col">
-                    <p class="recipe-nutrients-text">
-                        {% for key, value in recipe.nutrition.items %}
-                            <span>{{ key }}: {{ value }}</span><br>
-                        {% endfor %}
-                    </p>
+<div class="container-fluid recipe">
+    <div class="container ">
+        {%for recipe in recipes%}
+        <div class="row row-cols-1 recipe-container">
+            <div class="col">
+                <h3 class="recipe-heading">
+                    {{recipe.title}}
+                </h3>
+                <hr>
+            </div>
+            <div class="col">
+                <div class="row recipe-content">
+                    <div class="col">
+                        <img src="{{recipe.image}}" alt="recipe image" class="recipe-img">
+                    </div>
+                    <div class="col">
+                        <p class="recipe-description-text">
+                            {{recipe.description}}
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="recipe-nutrients-text">
+                            {% for key, value in recipe.nutrition.items %}
+                                <span>{{ key }}: {{ value }}</span><br>
+                            {% endfor %}
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>   
-    {% endfor %}
+            <div class="col">
+                <div class="btn-group reaction-btn" role="group" aria-label="Basic">
+                    <button type="button" class="btn btn-dark-lg"><img width="35" height="35" src="https://img.icons8.com/wired/35/like.png" alt="like-icon"/></button>
+                    <button type="button" class="btn btn-dark-lg"><img width="35" height="35" src="https://img.icons8.com/dotty/35/dislike.png" alt="dislike"/></button>
+                </div>
+            </div>
+        </div>   
+        {% endfor %}
+    </div>
 </div>
+
 
 
 
