@@ -6,53 +6,59 @@
 
 <div class="container-fluid  single-recipe">
     <div class="container">
+        {% if recipe %}
         <div class="row row-cols-1">
             <div class="col">
                 <h1 class="single-recipe-heading">
-                    ########################
+                    {{recipe.title}}
                 </h1>
             </div>
             <div class="col single-recipe-image">
-                <img src="########" alt="The image of the recipe being explored" class="single-recipe-banner">
+                <img src="{{recipe.image}}" alt="The image of the recipe being explored" class="single-recipe-banner">
             </div>
             <div class="col">
                 <p class="single-recipe-prep">
-                    ...................
+                    {{recipe.prep_time}}
                 </p>
             </div>
             <div class="col">
                 <p class="single-recipe-cook">
-                    ...................
+                    {{recipe.cook_time}}
                 </p>
             </div>
             <div class="col">
                 <p class="single-recipe-ingredients">
-                    ...................
+                    {% for ingredient in recipe.ingredients %}
+                        {{ingredient.ingredient.name}}<br>
+                        {{ingredient.description}}<br><br>
+                    {% endfor %}
                 </p>
             </div>
             <div class="col">
                 <p class="single-recipe-servings">
-                    ...................
+                    {{recipe.num_servings}}
                 </p>
             </div>
             <div class="col">
                 <p class="single-recipe-instructions">
-                    ...................
+                    {% for instruction in recipe.instructions %}
+                        {{instruction.step}} <br> {{instruction.description}} <br><br>
+                    {% endfor %}
                 </p>
             </div>
             <div class="col">
                 <p class="single-recipe-ratings">
-                    ...................
+                    {{recipe.user_ratings}}
                 </p>
             </div>
             <div class="col">
                 <p class="single-recipe-tips">
-                    ...................
+                    {{recipe.tips}} # 1-10 rating range
                 </p>
             </div>
             <div class="col">
                 <p class="single-recipe-video">
-                    ...................
+                    <a href="{{recipe.video}}">Video</a>
                 </p>
             </div>
             <div class="col">
@@ -62,6 +68,7 @@
                 </div>
             </div>
         </div>
+        {%endif%}
     </div>
 </div>
 

@@ -1,4 +1,5 @@
 import datetime
+import math
 import random
 import requests
 from django.http import JsonResponse
@@ -160,7 +161,7 @@ def get_recipe_by_id(request, pk):
     response = requests.get(url, headers=API_HEADERS)
 
     if response.status_code == 200:
-        return JsonResponse(response.json(), safe=False, status=200)
+        return JsonResponse( normalize_recipe(response.json(), 'online'), safe=False, status=200)
     else:
         return JsonResponse({"error": "Failed to fetch recipe"}, status=response.status_code)
 
@@ -221,6 +222,11 @@ def normalize_recipe(recipe, source):
             "nutrition": nutrition_dict,
             "user_ratings": recipe.get("rating_score"),
             "credit": recipe.get("credit_name"),
+            "prep_time": recipe.get("prep_time"),
+            "cook_time": recipe.get("cook_time_minutes"),
+            "tips": "",
+            "video": "",
+            "date": "",
             "source": "local",
         }
 
@@ -251,6 +257,11 @@ def normalize_recipe(recipe, source):
             for instruction in recipe.get("instructions", [])
         ]
 
+        #Normalize ratings
+        rating = float(recipe.get("user_ratings", {}).get("score", ""))
+        rating = rating * 10
+        rating = math.floor(rating)
+
         return {
             "id": recipe.get("id"),
             "title": recipe.get("name"),
@@ -260,8 +271,13 @@ def normalize_recipe(recipe, source):
             "image": recipe.get("thumbnail_url"),
             "num_servings": recipe.get("num_servings"),
             "nutrition": recipe.get("nutrition", {}),
-            "user_ratings": recipe.get("user_ratings", {}).get("score"),
-            "credit": recipe.get("credits", [{}])[0].get("name"),
+            "user_ratings": rating,
+            "credit": recipe.get("credits", [{}])[0].get("name", ""),
+            "prep_time": recipe.get("prep_time_minutes"),
+            "cook_time": recipe.get("cook_time_minutes", ""),
+            "tips": recipe.get("tips_summary", {}).get("content", ""),
+            "video": recipe.get("video_url",""),
+            "date": recipe.get("created_at", ""),
             "source": "online",
         }
 

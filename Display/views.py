@@ -39,6 +39,9 @@ def logout_user(request):
     return redirect('home')
 
 def single_recipe(request, pk):
+    response = requests.get(f'http://127.0.0.1:8000/API/online_recipes/{pk}')
+    if response.status_code == 200:
+        return render(request, 'singles.html', {"recipe" : response.json()})
     return render(request, 'singles.html')
 
 #### root categories ######
