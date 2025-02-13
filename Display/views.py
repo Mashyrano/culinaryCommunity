@@ -9,6 +9,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from rest_framework  import status
 from rest_framework.decorators import api_view
+from django.views.decorators.csrf import csrf_exempt
 
 def home(request):
     context = get_context()
@@ -17,6 +18,8 @@ def home(request):
 def contact(request):
     return render(request, 'contact.html')
 
+@csrf_exempt
+@api_view(['POST'])
 def login_view(request):
     if request.method == "POST":
         form = AuthenticationForm(data=request.POST)
@@ -29,6 +32,7 @@ def login_view(request):
 
     return render(request, "account/login.html", {"form": form})
 
+@csrf_exempt
 @api_view(['POST'])
 def logout_user(request):
     logout(request)

@@ -3,7 +3,7 @@ import random
 import requests
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
-from .serializer import RecipeSerializer, SavedRecipeSeializer, Root_tagsSerializer, Parent_tagsSerializer, TaggsSerializer
+from .serializer import RecipeSerializer, Root_tagsSerializer, Parent_tagsSerializer, TaggsSerializer
 from .models import Recipe, SavedRecipe, Root_tags, Parent_tags, Tags
 from rest_framework.response  import Response
 from rest_framework  import status
@@ -38,26 +38,6 @@ def create_account(request):
     )
     return JsonResponse(f'{user.username} created', safe=False ,status=status.HTTP_201_CREATED)
 
-#@api_view(['POST'])
-@csrf_exempt
-def login_user(request):
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        login(request, user)
-        return JsonResponse(f'{user.username} logged  in', safe=False ,status=status.HTTP_200_OK)
-    else:
-        return JsonResponse(f'invalid credentials', safe=False ,status=status.HTTP_401_UNAUTHORIZED)
-        #return render(request, 'login.html')
-
-#@api_view(['POST'])
-@csrf_exempt
-def logout_user(request):
-    logout(request)
-    return JsonResponse(f'logout success', safe=False ,status=status.HTTP_200_OK)
-
 # ======== recipes ==============
 
 # return all recipes saved by user
@@ -68,7 +48,6 @@ def my_recipes(request):
 
     # Fetch saved recipe IDs and sources efficiently
     saved_recipes = SavedRecipe.objects.filter(user_id=user).values_list("recipe_id", "recipe_source")
-
     # Separate recipe IDs by source using dictionary grouping
     recipe_groups = {"local": [], "api": []}
     for recipe_id, source in saved_recipes:
@@ -79,7 +58,7 @@ def my_recipes(request):
         normalize_recipe(recipe, "local")
         for recipe in map(get_local_recipe, recipe_groups["local"])
         if recipe  # Ensure recipe is not None
-    ]
+    ]# NEXT LEVEL LIST comprehension
 
     # Fetch online recipes concurrently
     def fetch_online_recipe(recipe_id):
@@ -141,7 +120,8 @@ def fetch_categories(request):
 #Online APIs
 url = "https://tasty.p.rapidapi.com/recipes/list"
 API_HEADERS = {
-    "X-RapidAPI-Key": "7af5ecd32bmsh926189c0c2b057ap15ac7ajsn61dccf4b27aa",
+    "X-RapidAPI-Key" : "ed4336eccbmsh603b5213ddfc726p131fddjsn9786bbd2fdb8",
+    #"X-RapidAPI-Key": "7af5ecd32bmsh926189c0c2b057ap15ac7ajsn61dccf4b27aa",
     #"X-RapidAPI-Key": "1591f07ae7msh7f10f55f8f7af3dp1c379cjsn3c55198ef7a5",
     "X-RapidAPI-Host": "tasty.p.rapidapi.com"
 }
@@ -172,38 +152,6 @@ def search_recipes(request):
             return JsonResponse({"error": f"An error occurred: {str(e)}"}, status=500)
     
     return JsonResponse({"error": "Query or tag parameter is required"}, status=400)
-
-# for categories
-def search_recipes_lightweight(request):
-    tags = request.GET.get('tags', '')
-    if not tags:
-        return JsonResponse({"error": "Tag parameter is required"}, status=400)
-
-    params = {
-        "from": 0,
-        "size": 10,
-        "tags": tags
-    }
-
-    try:
-        response = requests.get(url, headers=API_HEADERS, params=params)
-        if response.status_code == 200:
-            recipes = response.json()
-            results = recipes.get('results', [])
-            if results:
-                # Extract random int url
-                random_indice = random.sample(range(len(results)), 1)
-                first_result = results[random_indice[0]]
-                thumbnail_url = first_result.get('thumbnail_url', '')
-                name = first_result.get('name', '')
-                return JsonResponse({"category": tags, "image": thumbnail_url, "name": name}, safe=False)
-            else:
-                return JsonResponse({"category": tags, "image": None}, safe=False)
-        else:
-            return JsonResponse({"error": "Failed to fetch recipes"}, status=response.status_code)
-    except Exception as e:
-        return JsonResponse({"error": f"An error occurred: {str(e)}"}, status=500)
-
 
 # Search a recipe by ID
 @api_view(['GET'])

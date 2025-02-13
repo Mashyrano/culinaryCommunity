@@ -4,7 +4,6 @@ from . import views
 
 urlpatterns = [
     path("search/", views.search_recipes, name="recipe_search"),
-    path("search_light/", views.search_recipes_lightweight, name="search_light"),
     path("local_recipes/", views.local_recipes, name="local_recipes"),
     path("local_recipes/<int:pk>/", views.local_recipes, name="local_recipes"),
     path("my_recipes/", views.my_recipes, name="my_recipes"),
@@ -15,6 +14,4 @@ urlpatterns = [
     path("tags/", views.fetch_categories, name="tags"),
 
     path("create_account/", views.create_account, name="create_account"),
-    path("login/", views.login_user, name="login"),
-    path("logout/", views.logout_user, name="logout"),
 ]
