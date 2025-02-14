@@ -188,12 +188,21 @@ footer{
     justify-content: space-between;
 }
 
-/* .recipe-description-text{
+.recipe-description-text{
     display: -webkit-box;
-   -webkit-line-clamp: 10; /* Number of lines 
+   -webkit-line-clamp: 10; /* Number of lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
-  } */
+  } 
+
+  .recipe-btn{
+    background-color: #FA7070;
+    color: #FEFDED;
+  }
+
+  .recipe-btn:hover{
+     border: 1px solid #000000;
+  }
 /*********************************** Contact Page Styling ***********************************/
 
 .contact-form{

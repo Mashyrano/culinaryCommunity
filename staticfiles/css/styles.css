@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*********************************** Basic Styling ***********************************/
+
+body {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+h1, h3, h2{
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 2% 0 ;
+}
+
+
+/* Header styling */
+
+header{
+    background-color: #FEFDED;
+}
+
+.intro{
+    background-color: #C6EBC5;
+    text-align: center;
+    padding: 1%;
+    font-weight: bold;
+    color: #fff8fe;
+}
+
+.search{
+    border: 1px #000000 solid;
+    padding: 1%;
+    width: 20%;
+}
+
+.sign-in-btn{
+    display: inline;
+}
+/* .navbar-nav{
+    justify-content: end;
+} */
+
+
+
+/* Footer styling */
+footer{
+    background-color: #FEFDED;
+}
+
+.footer-logo{
+    padding: 2% 0;
+}
+
+
+
+.copyright{
+    display: flex;
+    justify-content: flex-end;
+}
+/*********************************** Home Page Styling ***********************************/
+
+/* Banner styling */
+.banner{
+    background-color: #FEFDED;
+    padding: 5% 0 0 0;
+}
+
+.banner-imageContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.banner-image{
+    max-width: 100%;
+    height: 65%;
+}
+
+
+.banner-text{
+    padding-left: 5%;
+}
+
+
+.excerpt{
+    max-width :400px; ;
+}
+
+.excerpt-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 3; */
+    -webkit-box-orient: vertical;
+    margin: 5% 0;
+}
+
+
+.banner-btn :hover{
+    background-color: #FEFDED;
+    color:#FA7070 ;
+    border: 1px solid #000000;
+}
+
+.banner-btn{
+    background-color: #FA7070;
+}
+
+.banner-link{
+    color: #FEFDED;
+    text-decoration: none;
+}
+
+
+.card{
+    width: 15rem;
+    margin-bottom: 20%;
+    padding-bottom: 5%;
+}
+
+
+.cat-btn{
+    color: #000000;
+    text-decoration: none;
+}
+
+.card-img-top{
+    height: 15rem;
+    object-fit: cover;
+    background-color: #FEFDED;
+}
+
+
+.catagories{
+    background-color: #FA7070;
+    padding: 5% 0;
+}
+
+.catagories-heading{
+    color: #FEFDED;
+}
+/*********************************** Archive Page Styling ***********************************/
+.archive-btn-group{
+    padding: 2%;
+    background-color: #fff8fe;
+}
+
+.archive{
+    background-color: #FA7070;
+    padding: 5% 0;
+    margin: 5% 0;
+}
+
+.archive-heading{
+    color: #FEFDED;
+    padding: 5% 0;
+}
+/*********************************** Recipe Page Styling ***********************************/
+
+.individual-recipe{
+    background-color: #A8DF8E;
+}
+
+.recipe-img{
+    width: 100%;
+    height: 100%;
+}
+
+.recipe{
+    background-color: #FEFDED;
+    padding: 5% 0;
+}
+.recipe-container{
+    margin-bottom: 10%;
+    border: 0.5rem solid #FA7070;
+    padding: 0 2% 2% 2%;
+}
+
+.recipe-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .recipe-description-text{
+    display: -webkit-box;
+   -webkit-line-clamp: 10; /* Number of lines 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  } */
+/*********************************** Contact Page Styling ***********************************/
+
+.contact-form{
+    width: 70%;
+    margin-bottom: 5%;
+}
+
+.form{
+    padding: 5%;
+}
+
+.contact-submit-btn{
+    margin-top: 5%;
+    background-color: #FA7070;
+    color: #FEFDED;
+    border: none;
+}
+
+
+
+
+
+/*********************************** Login Page Styling ***********************************/
+.login-page{
+    background-color: #FA7070;
+    display: grid;
+    place-items: center; /* Centers both horizontally and vertically */
+    height: 100vh;
+}
+
+.login{
+    padding: 5%;
+    margin: auto;
+    background-color: #fff8fe;
+    width: 50%;
+    border-radius: 3%;
+}
+
+.login-form{
+    margin-bottom: 5%;
+}
+
+.forgot{
+    color: #000000;
+    text-decoration: none;
+}
+
+.forgot:hover{
+    border: 1px solid #000000;
+    padding: 2%;
+    border-radius: 3%;
+}
+
+.login-submit-btn{
+    background-color: #FA7070;
+    color: #FEFDED;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.login-submit-btn:hover{
+    background-color: #FEFDED;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+
+/*********************************** Single Page Styling ***********************************/
+
+.single-recipe{
+    background-color: #FEFDED;
+    padding: 5% 0;
+}

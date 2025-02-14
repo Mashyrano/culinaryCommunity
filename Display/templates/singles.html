@@ -17,16 +17,25 @@
                 <img src="{{recipe.image}}" alt="The image of the recipe being explored" class="single-recipe-banner">
             </div>
             <div class="col">
+                <h3 class="single-prep-heading">
+                    Preparation time
+                </h3>
                 <p class="single-recipe-prep">
-                    {{recipe.prep_time}}
+                    {{recipe.prep_time}} minutes
                 </p>
             </div>
             <div class="col">
+                <h3 class="single-cook-heading">
+                    Cooking time
+                </h3>
                 <p class="single-recipe-cook">
-                    {{recipe.cook_time}}
+                    {{recipe.cook_time}} minutes
                 </p>
             </div>
             <div class="col">
+                <h3 class="single-ingredients-heading">
+                    Ingredients
+                </h3>
                 <p class="single-recipe-ingredients">
                     {% for ingredient in recipe.ingredients %}
                         {{ingredient.ingredient.name}}<br>
@@ -35,11 +44,17 @@
                 </p>
             </div>
             <div class="col">
+                <h3 class="single-servings-heading">
+                    Number or servings
+                </h3>
                 <p class="single-recipe-servings">
                     {{recipe.num_servings}}
                 </p>
             </div>
             <div class="col">
+                <h3 class="single-instructions-heading">
+                    Cooking instructions
+                </h3>
                 <p class="single-recipe-instructions">
                     {% for instruction in recipe.instructions %}
                         {{instruction.step}} <br> {{instruction.description}} <br><br>
@@ -47,15 +62,24 @@
                 </p>
             </div>
             <div class="col">
+                <h3 class="single-prep-heading">
+                    Preparation time
+                </h3>
                 <p class="single-recipe-ratings">
                     {{recipe.user_ratings}}
                 </p>
             </div>
             <div class="col">
+                <h3 class="single-tips-heading">
+                    Here are a couple of tips for you:)
+                </h3>
                 <p class="single-recipe-tips">
                     {{recipe.tips}} # 1-10 rating range
                 </p>
             </div>
+            <h3 class="single-video-heading">
+                Watch a video to see how it's done
+            </h3>
             <div class="col">
                 <p class="single-recipe-video">
                     <a href="{{recipe.video}}">Video</a>
