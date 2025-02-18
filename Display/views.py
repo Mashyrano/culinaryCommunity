@@ -97,6 +97,12 @@ def explore(request, tag):
 
     return render(request, 'archive.html', context)
 
+def adding(request):
+    return render(request, 'adding.html')
+
+def user(request):
+    return render(request, 'user.html')
+
 def recipe_search(request):
     query = request.GET.get('query', '')
     recipes = []
