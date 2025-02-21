@@ -42,25 +42,126 @@
                     <form>
                         <div class="form-group">
                             <label for="InputName">Name of recipe</label>
-                            <input type="name" class="form-control contact-form" id="exampleInputPassword1" placeholder="Full Name">
+                            <input type="name" class="form-control contact-form" id="exampleInputPassword1" placeholder="Name of the recipe">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="catDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Recipe category
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="catDropdown">
+                                <a href="#" class="dropdown-item">Breakfast</a>
+                                <a href="#" class="dropdown-item">Lunch</a>
+                                <a href="#" class="dropdown-item">Supper</a>
+                                <a href="#" class="dropdown-item">Branch</a>
+                                <a href="#" class="dropdown-item">Snack</a>
+                                <a href="#" class="dropdown-item">Healthy</a>
+                            </div>
                         </div>
                         <div class="form-group">
                           <label for="description" class="form-label">Description</label>
-                          <input type="number" class="form-control contact-form" id="age" name="description"  placeholder="What is your recipe about" >
-                        </div>            
-                        <div class="form-group">
+                          <textarea class="form-control" id="FormControlTextarea1" rows="8" placeholder="Please explain what your recipe is about."></textarea>
+                        </div>   
+
+                        <!-- <div class="form-group">
                             <label for="InputEmail1">Ingredients</label>
-                            <input type="email" class="form-control contact-form" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            <textarea class="form-control" id="FormControlTextarea1" rows="20" placeholder="Enter the ingredients."></textarea>
+                        </div> -->
+
+                        <h2>Enter Ingredients and Quantities</h2>
+    <form id="ingredient-form">
+        <div id="ingredient-container">
+            <div class="ingredient-entry">
+                <input type="text" name="ingredient" placeholder="Enter an ingredient" required>
+                <input type="text" name="quantity" placeholder="Enter quantity" required>
+            </div>
+        </div>
+        <button type="button" onclick="addIngredient()">Add More Ingredients</button>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Ingredients and Quantities List:</h3>
+    <ul id="ingredient-list"></ul>
+
+    <script>
+        // Function to add more ingredient and quantity fields
+        function addIngredient() {
+            const ingredientContainer = document.getElementById('ingredient-container');
+            const newEntry = document.createElement('div');
+            newEntry.classList.add('ingredient-entry');
+
+            const ingredientInput = document.createElement('input');
+            ingredientInput.type = 'text';
+            ingredientInput.name = 'ingredient';
+            ingredientInput.placeholder = 'Enter an ingredient';
+            newEntry.appendChild(ingredientInput);
+
+            const quantityInput = document.createElement('input');
+            quantityInput.type = 'text';
+            quantityInput.name = 'quantity';
+            quantityInput.placeholder = 'Enter quantity';
+            newEntry.appendChild(quantityInput);
+
+            ingredientContainer.appendChild(newEntry);
+        }
+
+        // Handle form submission
+        document.getElementById('ingredient-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const ingredientInputs = document.querySelectorAll('input[name="ingredient"]');
+            const quantityInputs = document.querySelectorAll('input[name="quantity"]');
+            const ingredients = [];
+
+            // Collect all ingredient and quantity values
+            for (let i = 0; i < ingredientInputs.length; i++) {
+                const ingredient = ingredientInputs[i].value;
+                const quantity = quantityInputs[i].value;
+
+                if (ingredient && quantity) {
+                    ingredients.push({ ingredient, quantity });
+                }
+            }
+
+            // Display the ingredients and quantities in a list
+            const ingredientList = document.getElementById('ingredient-list');
+            ingredientList.innerHTML = ''; // Clear previous list
+            ingredients.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.ingredient}: ${item.quantity}`;
+                ingredientList.appendChild(li);
+            });
+        });
+    </script>
+
+                        <div class="form-group">
+                            <label for="InputEmail1">Preparation instructions</label>
+                            <textarea class="form-control" id="FormControlTextarea1" rows="20" placeholder="Preparation instructions."></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="InputEmail1">Nutritional Information</label>
-                            <input type="email" class="form-control contact-form" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            <label for="InputName">Prep time</label>
+                            <input type="text" class="form-control contact-form" id="prep time" placeholder="Prep time">
                         </div>
                         <div class="form-group">
-                            <label for="InputEmail1">Add an image</label>
-                            <input type="email" class="form-control contact-form" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            <label for="InputName">Cooking time</label>
+                            <input type="text" class="form-control contact-form" id="cooking time" placeholder="Cooking time">
                         </div>
-                        <button type="submit" class="btn btn-outline-dark btn-md contact-submit-btn" >Submit</button>
+                        <div class="form-group">
+                            <label for="InputName">Servings</label>
+                            <input type="text" class="form-control contact-form" id="servings" placeholder="servings">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Difficulty level
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="difficultyDropdown">
+                                <a href="#" class="dropdown-item">Easy</a>
+                                <a href="#" class="dropdown-item">Medium</a>
+                                <a href="#" class="dropdown-item">Hard</a>
+                            </div>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-outline-dark btn-md contact-submit-btn" >Save your recipe</button>
                     </form>
                 </div>
             </div>

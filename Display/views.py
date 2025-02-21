@@ -86,6 +86,7 @@ def explore(request, tag):
                         "title":"offline title",
                         "image":"hhttp://ghhjsd.cb",
                         "description":"offline description",
+                        "id":1,
                         "nutrition": {
                             "offline":"offline"
                         }
@@ -123,6 +124,7 @@ def recipe_search(request):
                     "title":"offline title",
                     "image":"hhttp://ghhjsd.cb",
                     "description":"offline description",
+                    "id":1,
                     "nutrition": {
                         "offline":"offline"
                     }
@@ -157,7 +159,8 @@ def get_context():
         "random": response.json() if response and response.status_code == 200 else {
             "name": "offline name",
             "description": "offline description",
-            "thumbnail_url": "######"
+            "thumbnail_url": "######",
+            "id":1
         },
         "categories": categories if categories else [
             {"name": "Default Category", "description": "No categories available"}
